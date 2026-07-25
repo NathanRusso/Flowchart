@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <h1 id="pageTitle">GCCIS 2025-2026 Flowchart</h1>
@@ -65,6 +66,20 @@
     <button id="showCheckboxesButton" class="toolbar" type="button">Show Checkboxes <i class="fa-solid fa-plus"></i></button>
     <button id="hideCheckboxesButton" class="toolbar" type="button">Hide Checkboxes <i class="fa-solid fa-minus"></i></button>
     <button id="clearFlowchartButton" class="toolbar" type="button">Clear Flowchart <i class="fa-solid fa-xmark"></i></button>
+
+    <div id="coursePopup">
+        <button id="coursePopupButton"><i class="fa-solid fa-xmark"></i></button>
+        <div id="coursePopupTitle" class="coursePopupInformation"></div>
+        <div id="coursePopupDescription" class="coursePopupInformation">
+            Description goes here
+        </div>
+        <div id="coursePopupPrerequisites" class="coursePopupInformation">
+            <b>Prerequisites:</b>
+        </div>
+        <div id="coursePopupOffered" class="coursePopupInformation">
+            <b>Typically Offered:</b>
+        </div>
+    </div>
 
     <div id="flowchartBody">
         <div id="year-0" class="year" style="display: none">
@@ -124,6 +139,6 @@
     <ul id="flowchartNotesList" contenteditable="true"></ul>
 
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.7/Sortable.min.js"></script>
-    <script src="/js/main.js"></script>
+    <script type="module" src="/js/main.js"></script>
 </body>
 </html>
