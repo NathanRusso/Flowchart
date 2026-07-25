@@ -554,66 +554,77 @@ function displayCoursePopup(target) {
     const courseDataset = tagName == "LABEL" ? target.parentElement.dataset : target.dataset;
     const courseChildren = tagName == "LABEL" ? target.parentElement.children : target.children;
     const courseType = courseDataset.courseType;
+    let courseDiscipline = courseDataset.courseDiscipline;
+    let courseNumber = courseDataset.courseNumber;
 
     switch (courseType) {
         case "co-op-required": {
             coursePopup.style.borderColor = "var(--co-op-border-color)";
-            coursePopupTitle.textContent = target.textContent;
             break;
         }
         case "co-op-option": {
             coursePopup.style.borderColor = "var(--co-op-border-color)";
-            const courseSelect = courseChildren[0];
-            const selectedCourse = courseSelect.selectedOptions[0];
-            const d = selectedCourse.dataset;
-            coursePopupTitle.textContent = `${d.optionDiscipline}-${d.optionNumber} ${selectedCourse.value}`;
+            const courseSelectedDataset = courseChildren[0].selectedOptions[0].dataset;
+            courseDiscipline = courseSelectedDataset.optionDiscipline;
+            courseNumber = courseSelectedDataset.optionNumber;
             break;
         }
         case "class-required": {
             coursePopup.style.borderColor = color.getDisciplineColor(courseDataset.courseDiscipline);
-            coursePopupTitle.textContent = target.textContent;
             break;
         }
         case "class-input": {
-            const courseInput = courseChildren[1];
-            const currentValue = courseInput.value;
-            if (!currentValue || !courseRegex.test(currentValue)) {
+            const currentInputValue = courseChildren[1].value;
+            if (!currentInputValue || !courseRegex.test(currentInputValue)) {
                 alert("Cannot find class information. Format must be in ABCD-123, ABCD-123H, or blank");
                 return;
             }
             coursePopup.style.borderColor = color.getAttributeColor(courseDataset.courseAttribute);
-            coursePopupTitle.textContent = currentValue;
+            const courseValues = currentInputValue.trim().split("-");
+            courseDiscipline = courseValues[0];
+            courseNumber = courseValues[1];
             break;
         }
         case "class-option-mix": {
-            const courseSelect = courseChildren[0];
-            const selectedCourse = courseSelect.selectedOptions[0];
-            const currentValue = selectedCourse.value;
-            const d = selectedCourse.dataset;
-            if (currentValue) {
-                coursePopup.style.borderColor = color.getDisciplineColor(d.optionDiscipline);
-                coursePopupTitle.textContent = `${d.optionDiscipline}-${d.optionNumber} ${selectedCourse.value}`;
+            const courseSelected = courseChildren[0].selectedOptions[0];
+            const courseSelectedValue = courseSelected.value;
+            const courseSelectedDataset = courseSelected.dataset;
+
+            if (courseSelectedValue) {
+                coursePopup.style.borderColor = color.getDisciplineColor(courseSelectedDataset.optionDiscipline);
+                courseDiscipline = courseSelectedDataset.optionDiscipline;
+                courseNumber = courseSelectedDataset.optionNumber;
             } else {
-                const courseInput = courseChildren[2];
-                const currentValue = courseInput.value;
-                if (!currentValue || !courseRegex.test(currentValue)) {
+                const currentInputValue = courseChildren[2].value;
+                if (!currentInputValue || !courseRegex.test(currentInputValue)) {
                     alert("Cannot find class information. Format must be in ABCD-123, ABCD-123H, or blank");
                     return;
                 }
-                coursePopup.style.borderColor = color.getDisciplineColor(d.optionAttribute);
-                coursePopupTitle.textContent = currentValue;
+                coursePopup.style.borderColor = color.getAttributeColor(courseSelectedDataset.optionAttribute);
+                const courseValues = currentInputValue.trim().split("-");
+                courseDiscipline = courseValues[0];
+                courseNumber = courseValues[1];
             }
             break;
         }
         case "class-option-attribute": {
             coursePopup.style.borderColor = color.getAttributeColor(courseDataset.courseAttribute);
-            const courseSelect = courseChildren[1];
-            const selectedCourse = courseSelect.selectedOptions[0];
-            const d = selectedCourse.dataset;
-            coursePopupTitle.textContent = `${d.optionDiscipline}-${d.optionNumber} ${selectedCourse.value}`;
+            const courseSelectedDataset = courseChildren[1].selectedOptions[0].dataset;
+            courseDiscipline = courseSelectedDataset.optionDiscipline;
+            courseNumber = courseSelectedDataset.optionNumber;
             break;
         }
     }
+
+    console.log(courseDiscipline);
+    console.log(courseNumber);
+
+    let fullCourseCredits;
+    let fullCourseName;
+    let fullCourseDescription;
+    let fullCoursePrerequisites;
+    let fullCourseOffered;
+    // Make DB call
 
     revealCoursePopup();
 }
