@@ -29,6 +29,7 @@ let hyperDictionary = {}        // A mapping of hyperParentIds to hyperChildIds 
 let initialHyperChildIds = {}   // A mapping of hyperParentIds to the initial hyperChildIds
 let exoticDictionary = {}       // A mapping of exoticIds to lists if related courseDivs
 let initialExoticIndexes = {}   // A mapping of exoticIds to the initial selected index
+let courseInformationCache = {} // A mapping of courses to their database information
 
 //------------------------------ EVENT LISTENERS BELOW ------------------------------//
 
@@ -618,6 +619,17 @@ function displayCoursePopup(target) {
     coursePopup.dataset.courseDiscipline = courseDiscipline;
     coursePopup.dataset.courseNumber = courseNumber;
 
+    // Check if the user already asked for the course
+    const courseKey = `${courseDiscipline}-${courseNumber}`;
+    if (Object.hasOwn(courseInformationCache, courseKey))  {
+        const popupInformation = courseInformationCache[courseKey];
+        coursePopup.style.borderColor = popupInformation.borderColor;
+        coursePopupTitle.textContent = popupInformation.title;
+        coursePopupDescription.textContent = popupInformation.description;
+        revealCoursePopup();
+        return;
+    }
+
     // Gets the course information from the database and updates the popup.
     getCourseDatabaseInformation(courseDiscipline, courseNumber).then(courseDBInfo => {
         if (!courseDBInfo || courseDBInfo === {}) {
@@ -628,6 +640,11 @@ function displayCoursePopup(target) {
         const courseCreditString = courseDBInfo.credits == 1 ? "Credit" : "Credits";
         coursePopupTitle.textContent = `${courseDBInfo.code}-${courseDBInfo.course} ${courseDBInfo.title} (${courseDBInfo.credits} ${courseCreditString})`;
         coursePopupDescription.textContent = courseDBInfo.description.replace(/\u001A/g, "'");  // Handles character issue in database dump.
+        courseInformationCache[courseKey] = {
+            borderColor: courseColor,
+            title: coursePopupTitle.textContent,
+            description: coursePopupDescription.textContent
+        }
         revealCoursePopup();
     });
 }
