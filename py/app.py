@@ -4,14 +4,19 @@ This file will contain the logic to get data from the course database.
 
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+from dotenv import load_dotenv
 import mariadb
 import sys
+import os
 
 course_query = (
     "SELECT c.quarter, d.code, c.course, c.credits, c.title, c.description "
     "FROM courses c JOIN departments d ON c.department = d.id "
     "WHERE d.code = ? AND c.course = ? ORDER BY c.quarter DESC LIMIT 1"
 )
+
+# Load Environment variables
+load_dotenv()
 
 # Setup flask app
 app = Flask(__name__)
@@ -36,11 +41,11 @@ def getCourseInformation() -> jsonify:
         # Connect to the database
         #try:
         connection = mariadb.connect(
-            user="",
-            password="",
-            host="",
+            user=os.getenv("DATABASE_USER"),
+            password=os.getenv("DATABASE_PASSWORD"),
+            host=os.getenv("DATABASE_HOST"),
             port=3306,
-            database="",
+            database=os.getenv("DATABASE_NAME")
         )
         cursor = connection.cursor(dictionary=True)
         print(f"[SUCCESS] Connected to MySQL MariaDB database!")

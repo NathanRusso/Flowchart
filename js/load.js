@@ -641,7 +641,7 @@ function displayCoursePopup(target) {
  */
 async function getCourseDatabaseInformation(discipline, number) {
     // TODO: const url = new URL("/course", window.location.origin);
-    const url = new URL("http://localhost:5000/course");
+    const url = new URL("http://localhost:5000/course"); // Only local
     url.search = new URLSearchParams({ discipline: discipline, number: number });
     try {
         const response = await fetch(url);
