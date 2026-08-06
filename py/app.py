@@ -9,6 +9,7 @@ import mariadb
 import sys
 import os
 
+
 ############################## Global Variables ##############################
 
 
@@ -80,21 +81,23 @@ def get_course_information() -> jsonify:
         number = request.args.get('number')
         cursor.execute(course_query, (discipline, number))
         courseInformation = cursor.fetchone()
-        #print(courseInformation)
-
         if courseInformation is None: raise ValueError(f"Could not find class information matching {discipline}-{number}")
 
-        return jsonify(courseInformation), 200
-    except (AttributeError, ValueError) as ce:      # custom exception
-        exception_message = f"[ERROR] get_course_information(): {ce}!"
+        return jsonify(courseInformation), 200      # Ok
+    except AttributeError as ae:
+        exception_message = f"[ERROR] get_course_information(): {ae}!"
         print(exception_message)
-        return jsonify(exception_message), 500
+        return jsonify(exception_message), 503      # Service Unavailable
+    except ValueError as ve:
+        exception_message = f"[ERROR] get_course_information(): {ve}!"
+        print(exception_message)
+        return jsonify(exception_message), 404      # Not Found
     except Exception as e:
         exception_message = f"[ERROR] get_course_information(): Could not get course information: {e}!"
         print(exception_message)
-        return jsonify(exception_message), 500
+        return jsonify(exception_message), 500      # Internal Server Error
    
 
 if __name__ == "__main__":
-    connect_to_database()       # Connect to the course information database
-    app.run(port=5000, debug=True)
+    connect_to_database()           # Connect to the course information database
+    app.run(port=5000, debug=True)  # Used for development server not production server
