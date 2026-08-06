@@ -1,5 +1,5 @@
 """
-This file will contain the logic to get data from the course database.
+This file contains the logic to get data from the course database.
 """
 
 from flask import Flask, jsonify, request
@@ -10,10 +10,7 @@ import sys
 import os
 
 
-############################## Global Variables ##############################
-
-
-course_query = (
+COURSE_QUERY = (
     "SELECT c.quarter, d.code, c.course, c.credits, c.title, c.description "
     "FROM courses c JOIN departments d ON c.department = d.id "
     "WHERE d.code = ? AND c.course = ? ORDER BY c.quarter DESC LIMIT 1"
@@ -21,13 +18,10 @@ course_query = (
 connection = None
 cursor = None
 
+# Startup code
 app = Flask(__name__)   # Setup flask app
-CORS(app)
-
+CORS(app)               # Handle requests
 load_dotenv()           # Load Environment variables
-
-
-############################## Functions ##############################
 
 
 def connect_to_database():
@@ -62,6 +56,10 @@ def disconnect_from_database():
         print(f"[ERROR] disconnect_from_database(): Could not disconnect from the course database: {e}!")
 
 
+# Startup (continue)
+connect_to_database()   # Connection to the course information database
+
+
 @app.route("/course", methods=["GET"])
 def get_course_information() -> jsonify:
     """
@@ -79,7 +77,7 @@ def get_course_information() -> jsonify:
 
         discipline = request.args.get('discipline')
         number = request.args.get('number')
-        cursor.execute(course_query, (discipline, number))
+        cursor.execute(COURSE_QUERY, (discipline, number))
         courseInformation = cursor.fetchone()
         if courseInformation is None: raise ValueError(f"Could not find class information matching {discipline}-{number}")
 
@@ -96,8 +94,8 @@ def get_course_information() -> jsonify:
         exception_message = f"[ERROR] get_course_information(): Could not get course information: {e}!"
         print(exception_message)
         return jsonify(exception_message), 500      # Internal Server Error
-   
+
 
 if __name__ == "__main__":
     connect_to_database()           # Connect to the course information database
-    app.run(port=5000, debug=True)  # Used for development server not production server
+    app.run(port=5000, debug=True)  # Development server only
