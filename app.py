@@ -26,6 +26,8 @@ def connect_to_database():
     """
     Tries to connect to the course information database.
     """
+    connection = None
+    cursor = None
     try:
         global pool
         pool = mariadb.ConnectionPool(
@@ -41,6 +43,7 @@ def connect_to_database():
         )
         print(f"[SUCCESS] connect_to_database(): Connected to course database!")
     except Exception as e:
+        pool = None
         print(f"[ERROR] connect_to_database(): Could not connect to course database: {e}!")
 
 
@@ -106,5 +109,4 @@ def get_course_information() -> jsonify:
 
 
 if __name__ == "__main__":
-    connect_to_database()                           # Connect to the course information database
     app.run(host="0.0.0.0", port=5000, debug=True)  # Development server only
