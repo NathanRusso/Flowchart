@@ -14,6 +14,7 @@ COURSE_QUERY = (
     "FROM courses c JOIN departments d ON c.department = d.id "
     "WHERE d.code = ? AND c.course = ? ORDER BY c.quarter DESC LIMIT 1"
 )
+pool = None
 connection = None
 cursor = None
 
@@ -28,14 +29,16 @@ def connect_to_database():
     Tries to connect to the course information database.
     """
     try:
-        global connection, cursor
-        connection = mariadb.connect(
+        global pool, connection, cursor
+        pool = mariadb.ConnectionPool(
+            pool_name="flowchart_pool",
             user=os.getenv("DATABASE_USER"),
             password=os.getenv("DATABASE_PASSWORD"),
             host=os.getenv("DATABASE_HOST"),
             port=3306,
             database=os.getenv("DATABASE_NAME")
         )
+        connection = pool.get_connection()
         cursor = connection.cursor(dictionary=True)
         print(f"[SUCCESS] connect_to_database(): Connected to course database!")
     except Exception as e:
@@ -49,6 +52,7 @@ def disconnect_from_database():
     try:
         cursor.close()
         connection.close()
+        pool.close()
         print(f"[SUCCESS] disconnect_from_database(): Disconnected from the course database!")
     except Exception as e:
         print(f"[ERROR] disconnect_from_database(): Could not disconnect from the course database: {e}!")
