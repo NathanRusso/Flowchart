@@ -6,7 +6,6 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from dotenv import load_dotenv
 import mariadb
-import sys
 import os
 
 
@@ -41,7 +40,6 @@ def connect_to_database():
         print(f"[SUCCESS] connect_to_database(): Connected to course database!")
     except Exception as e:
         print(f"[ERROR] connect_to_database(): Could not connect to course database: {e}!")
-        sys.exit(1)
 
 
 def disconnect_from_database():
@@ -60,7 +58,7 @@ def disconnect_from_database():
 connect_to_database()   # Connection to the course information database
 
 
-@app.route("/course", methods=["GET"])
+@app.route("/api/course", methods=["GET"])
 def get_course_information() -> jsonify:
     """
     This gets the most recent course information for the selected course.
@@ -73,6 +71,7 @@ def get_course_information() -> jsonify:
         jsonify: The course's information.
     """
     try:
+        if connection is None or cursor is None: connect_to_database()  # Try to reconnect once
         if connection is None or cursor is None: raise AttributeError("Database connection has not established")
 
         discipline = request.args.get('discipline')
@@ -97,5 +96,5 @@ def get_course_information() -> jsonify:
 
 
 if __name__ == "__main__":
-    connect_to_database()           # Connect to the course information database
-    app.run(port=5000, debug=True)  # Development server only
+    connect_to_database()                           # Connect to the course information database
+    app.run(host="0.0.0.0", port=5000, debug=True)  # Development server only
