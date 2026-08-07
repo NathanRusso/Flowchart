@@ -15,8 +15,6 @@ COURSE_QUERY = (
     "WHERE d.code = ? AND c.course = ? ORDER BY c.quarter DESC LIMIT 1"
 )
 pool = None
-connection = None
-cursor = None
 
 # Startup code
 app = Flask(__name__)   # Setup flask app
@@ -29,17 +27,18 @@ def connect_to_database():
     Tries to connect to the course information database.
     """
     try:
-        global pool, connection, cursor
+        global pool
         pool = mariadb.ConnectionPool(
             pool_name="flowchart_pool",
+            pool_size=5,
+            pool_reset_connection=True,
+            pool_validation_interval=500,
             user=os.getenv("DATABASE_USER"),
             password=os.getenv("DATABASE_PASSWORD"),
             host=os.getenv("DATABASE_HOST"),
             port=3306,
             database=os.getenv("DATABASE_NAME")
         )
-        connection = pool.get_connection()
-        cursor = connection.cursor(dictionary=True)
         print(f"[SUCCESS] connect_to_database(): Connected to course database!")
     except Exception as e:
         print(f"[ERROR] connect_to_database(): Could not connect to course database: {e}!")
@@ -50,9 +49,7 @@ def disconnect_from_database():
     Tries to disconnect from the course information database.
     """
     try:
-        cursor.close()
-        connection.close()
-        pool.close()
+        if pool: pool.close()
         print(f"[SUCCESS] disconnect_from_database(): Disconnected from the course database!")
     except Exception as e:
         print(f"[ERROR] disconnect_from_database(): Could not disconnect from the course database: {e}!")
@@ -75,8 +72,14 @@ def get_course_information() -> jsonify:
         jsonify: The course's information.
     """
     try:
-        if connection is None or cursor is None: connect_to_database()  # Try to reconnect once
-        if connection is None or cursor is None: raise AttributeError("Database connection has not established")
+        if pool is None: connect_to_database()      # Try to establish a connection again
+        if pool is None: raise AttributeError("Database pool has been not established")
+
+        connection = pool.get_connection()
+        if connection is None: raise AttributeError("Database connection has been not established")
+
+        cursor = connection.cursor(dictionary=True)
+        if cursor is None: raise AttributeError("Database cursor has been not established")
 
         discipline = request.args.get('discipline')
         number = request.args.get('number')
@@ -97,6 +100,9 @@ def get_course_information() -> jsonify:
         exception_message = f"[ERROR] get_course_information(): Could not get course information: {e}!"
         print(exception_message)
         return jsonify(exception_message), 500      # Internal Server Error
+    finally:
+        if cursor: cursor.close()
+        if connection: connection.close()
 
 
 if __name__ == "__main__":
