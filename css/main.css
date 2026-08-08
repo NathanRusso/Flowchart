@@ -255,7 +255,6 @@ input[type="checkbox"] {
 
 @media (orientation:portrait) {
     #coursePopup {
-        top: 15%;
         left: 10%;
         width: 80vw;
     }
