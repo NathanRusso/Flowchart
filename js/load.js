@@ -33,7 +33,7 @@ let courseInformationCache = {} // A mapping of courses to their database inform
 
 //------------------------------ EVENT LISTENERS BELOW ------------------------------//
 
-coursePopupButton.addEventListener("click", hideCoursePopup);
+// coursePopupButton.addEventListener("click", hideCoursePopup); Not Ready Yet
 
 //------------------------------ FUNCTIONS BELOW ------------------------------//
 
@@ -406,7 +406,7 @@ export function createCourse(courseInfo) {
     courseDiv.append(checkbox); // Must come after text content assignment
 
     // This adds an event listener to display the class information pop-up
-    courseDiv.addEventListener("click", (event) => displayCoursePopup(event.target));
+    // courseDiv.addEventListener("click", (event) => displayCoursePopup(event.target)); Not ready yet
 
     return courseDiv;
 }
