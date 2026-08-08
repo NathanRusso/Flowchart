@@ -41,6 +41,7 @@
         <li>Customizable electives and course options</li>
         <li>Transfer credit support</li>
         <li>Dynamic year management</li>
+        <li>Popup course information</li>
     </ul>
     <hr>
 
@@ -55,6 +56,9 @@
         Then, they can fill in any of the empty course slots or set any of the dropdown courses with classes they have taken.
         Once satisfied, the flowchart can be saved into the user's file system.
         Finally, when wanting to view or edit the flowchart again, the user can upload the template back to the website.
+    </p>
+    <p>
+        Additionally, users can click on a course to view more information, including its full name, number of credits, and description.
     </p>
 
     <h3>Flowchart Format</h3>
@@ -161,16 +165,16 @@
     <h2 id="abbreviations">Abbreviations</h2>
     <h3>Pathway Abbreviations</h3>
     <ul>
-        <li><strong>AI</strong> – Artificial Intelligence</li>
-        <li><strong>CE</strong> – Computing Exploration</li>
-        <li><strong>CIT</strong> – Computing and Information Technology</li>
-        <li><strong>CS</strong> – Computer Science</li>
-        <li><strong>CSEC</strong> – Cybersecurity</li>
-        <li><strong>GDD</strong> – Game Design and Development</li>
-        <li><strong>HCC</strong> – Human-Centered Computing</li>
-        <li><strong>HCD</strong> – Humanities, Computing, and Design</li>
-        <li><strong>NMID</strong> – New Media Interactive Development</li>
-        <li><strong>SE</strong> – Software Engineering</li>
+        <li><strong>AI</strong> - Artificial Intelligence</li>
+        <li><strong>CE</strong> - Computing Exploration</li>
+        <li><strong>CIT</strong> - Computing and Information Technology</li>
+        <li><strong>CS</strong> - Computer Science</li>
+        <li><strong>CSEC</strong> - Cybersecurity</li>
+        <li><strong>GDD</strong> - Game Design and Development</li>
+        <li><strong>HCC</strong> - Human-Centered Computing</li>
+        <li><strong>HCD</strong> - Humanities, Computing, and Design</li>
+        <li><strong>NMID</strong> - New Media Interactive Development</li>
+        <li><strong>SE</strong> - Software Engineering</li>
     </ul>
 
     <h3>Degree Abbreviations</h3>
@@ -185,25 +189,41 @@
         <li><strong>Co-op</strong> - Cooperative Education</li>
         <li><a href="https://www.rit.edu/computing/">GCCIS</a> - Golisano College of Computing and Information Sciences</li>
         <li><a href="https://www.rit.edu/">RIT</a> - Rochester Institute of Technology</li>
+        <li><strong>WSGI</strong> Web Server Gateway Interface</li>
     </ul>
     <hr>
 
     <h2 id="technologies-used">Technologies Used</h2>
-    <h3>Languages</h3>
+    <h3>Application</h3>
     <ul>
-        <li>HyperText Markup Language (HTML)</li>
-        <li>Cascading Style Sheets (CSS)</li>
-        <li>JavaScript (JS)</li>
+        <li><a href="https://nginx.org/en/">Nginx</a> - HTTP web server and reverse proxy</li>
+        <li><a href="https://www.docker.com/">Docker</a> - Container platform used to build and run website containers</li>
+        <li><a href="https://okd.io/">OpenShift (OKD)</a> - Kubernetes-based container platform used to deploy and manage the website. Hosted by <a href="https://csh.rit.edu/">CSH</a></li>
     </ul>
 
-    <h3>Libraries</h3>
+    <h3>Frontend</h3>
     <ul>
-        <li><a href="https://github.com/SortableJS/Sortable">SortableJS</a> - Allows course blocks to be rearranged with smooth drag-and-drop interactions</li>
+        <li>HyperText Markup Language (HTML) - Markup language used to structure the website</li>
+        <li>Cascading Style Sheets (CSS) - Style sheet language used to style and format the website</li>
+        <li>JavaScript (JS) - Programming language used to provide website functionality</li>
+        <li><a href="https://sortablejs.github.io/Sortable/">SortableJS</a> - JavaScript library used to enable drag-and-drop course block reordering</li>
+    </ul>
+
+    <h3>Backend</h3>
+    <ul>
+        <li><a href="https://www.python.org/">Python</a> - Programming language used to implement the backend</li>
+        <li><a href="https://flask.palletsprojects.com/en/stable/">Flask</a> - Python web application framework used for backend request handling</li>
+        <li><a href="https://gunicorn.org/">Gunicorn</a> - WSGI HTTP server used to serve the Flask backend behind Nginx</li>
+    </ul>
+
+    <h3>Database</h3>
+    <ul>
+        <li><a href="https://mariadb.org/">MariaDB</a> - Relational database used to store course information. Hosted by <a href="https://csh.rit.edu/">CSH</a></li>
     </ul>
 
     <h3>Hosting</h3>
     <ul>
-        <li>The website is hosted on OpenShift (OKD) by CSH.</li>
+        <li><a href="https://okd.io/">OpenShift (OKD)</a> - Kubernetes-based container platform used to deploy and manage the website. Hosted by <a href="https://csh.rit.edu/">CSH</a></li>
     </ul>
 
 </body>
