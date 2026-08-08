@@ -57,6 +57,7 @@
     flex-direction: column;
     justify-content: center;    /* Centers horizontally */
     align-items: stretch;
+    overflow-y: auto;
     top: 25%;
     left: 25%;
     width: 50vw;
@@ -250,4 +251,12 @@ input[type="checkbox"] {
 
 #flowchartNotesList:hover {
     outline: auto;
+}
+
+@media (orientation:portrait) {
+    #coursePopup {
+        top: 15%;
+        left: 10%;
+        width: 80vw;
+    }
 }
