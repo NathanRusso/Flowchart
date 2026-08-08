@@ -26,8 +26,6 @@ def connect_to_database():
     """
     Tries to connect to the course information database.
     """
-    connection = None
-    cursor = None
     try:
         global pool
         pool = mariadb.ConnectionPool(
@@ -75,6 +73,8 @@ def get_course_information() -> jsonify:
         jsonify: The course's information.
     """
     try:
+        connection = None
+        cursor = None
         if pool is None: connect_to_database()      # Try to establish a connection again
         if pool is None: raise AttributeError("Database pool has been not established")
 
