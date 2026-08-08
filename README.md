@@ -16,12 +16,15 @@ Table of Contents:
 - Customizable electives and course options
 - Transfer credit support
 - Dynamic year management
+- Popup course information
 
 ## How Does the Website Work?
 
 Each flowchart represents a specific GCCIS pathway that one can pursue while at RIT. Each of the provided [templates](#current-templates-available) is set up with all of the required [courses (classes and co-ops)](#course-types) needed to complete the degree.
 
 Users can choose a template from the [available templates](#current-templates-available). Once selected, they can move the course squares around to match the semesters in which the classes were taken. Then, they can fill in any of the empty course slots or set any of the dropdown courses with classes they have taken. Once satisfied, the flowchart can be saved into the user's file system. Finally, when wanting to view or edit the flowchart again, the user can upload the template back to the website.
+
+Additionally, users can click on a course to view more information, including its full name, number of credits, and description.
 
 ### Flowchart Format
 
@@ -120,18 +123,25 @@ Each flowchart is divided into sections by year. Each year has 3 blocks inside o
 - **Co-op** - Cooperative Education
 - **GCCIS** - [Golisano College of Computing and Information Sciences](https://www.rit.edu/computing/)
 - **RIT** - [Rochester Institute of Technology](https://www.rit.edu/)
+- **WSGI** - Web Server Gateway Interface
 
 ## Technologies Used
 
-### Languages
-- HyperText Markup Language (HTML)
-- Cascading Style Sheets (CSS)
-- JavaScript (JS)
+### Application/Hosting
+- [Nginx](https://nginx.org/en/) - HTTP web server and reverse proxy
+- [Docker](https://www.docker.com/) - Container platform used to build and run website containers
+- [OpenShift (OKD)](https://okd.io/) - Kubernetes-based container platform used to deploy and manage the website. Hosted by [CSH](https://csh.rit.edu/)
 
-### Libraries
+### Frontend
+- HyperText Markup Language (HTML) - Markup language used to structure the website
+- Cascading Style Sheets (CSS) - Style sheet language used to style and format the website
+- JavaScript (JS) - Programming language used to provide website functionality
+- [SortableJS](https://sortablejs.github.io/Sortable/) - JavaScript library used to enable drag-and-drop course block reordering
 
-- [SortableJS](https://github.com/SortableJS/Sortable) - Allows course blocks to be rearranged with smooth drag-and-drop interactions
+### Backend
+- [Python](https://www.python.org/) - Programming language used to implement the backend
+- [Gunicorn](https://gunicorn.org/) - WSGI HTTP server used to serve the Flask backend behind Nginx
+- [Flask](https://flask.palletsprojects.com/en/stable/) - Python web application framework used for backend request handling
 
-### Hosting
-
-- The website is hosted on OpenShift (OKD) by CSH.
+### Database
+- [MariaDB](https://mariadb.org/) - Relational database used to store course information. Hosted by [CSH](https://csh.rit.edu/)

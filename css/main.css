@@ -117,14 +117,7 @@
 
 #coursePopupTitle {
     font-weight: bold;
-}
-
-#coursePopupDescription {
-
-}
-
-#coursePopupPrerequisites {
-
+    padding-right: 17px;
 }
 
 .year {
