@@ -472,6 +472,7 @@ function hideCheckboxes() {
  */
 function clearFlowchart(title, resetChoose, resetUpload) {
     pageTitle.textContent = title;                      // Sets the title
+    flowchartNotesList.textContent = "";                // Gets rid of the flowchart notes
     if (resetChoose && resetUpload) {
         flowchartNotesTitle.style.display = "None";
         flowchartNotesList.style.display = "None";
@@ -479,7 +480,6 @@ function clearFlowchart(title, resetChoose, resetUpload) {
         flowchartNotesTitle.style.display = "Block";
         flowchartNotesList.style.display = "Block";
     }
-    flowchartNotesList.textContent = "";                // Gets rid of the flowchart notes
     if (resetChoose) templateSelect.selectedIndex = 0;  // Resets the "Choose Template" selector to the 1st option.
     if (resetUpload) uploadedFilename = null;           // Resets the name of the uploaded file
     transferDiv.replaceChildren();                      // Removes all transfer courses

@@ -250,7 +250,7 @@ input[type="checkbox"] {
     display: none;
 }
 
-#flowchartNotesList:hover {
+#flowchartNotesList {
     display: none;
 }
 
