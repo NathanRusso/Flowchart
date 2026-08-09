@@ -31,6 +31,7 @@ const transferDividerDiv = document.getElementById("year-divider-0");
 const allCheckboxes = document.getElementsByName("courseCheckbox");
 load.makeSortable(transferDiv);
 
+const flowchartNotesTitle = document.getElementById("flowchartNotesTitle");
 const flowchartNotesList = document.getElementById("flowchartNotesList");
 
 //------------------------------ EVENT LISTENERS BELOW ------------------------------//
@@ -471,6 +472,14 @@ function hideCheckboxes() {
  */
 function clearFlowchart(title, resetChoose, resetUpload) {
     pageTitle.textContent = title;                      // Sets the title
+    if (resetChoose && resetUpload) {
+        flowchartNotesTitle.style.display = "None";
+        flowchartNotesList.style.display = "None";
+    } else {
+        flowchartNotesTitle.style.display = "Block";
+        flowchartNotesList.style.display = "Block";
+    }
+    flowchartNotesList.textContent = "";                // Gets rid of the flowchart notes
     if (resetChoose) templateSelect.selectedIndex = 0;  // Resets the "Choose Template" selector to the 1st option.
     if (resetUpload) uploadedFilename = null;           // Resets the name of the uploaded file
     transferDiv.replaceChildren();                      // Removes all transfer courses
@@ -479,6 +488,5 @@ function clearFlowchart(title, resetChoose, resetUpload) {
         document.getElementById(`year-${i}`).remove();
         document.getElementById(`year-divider-${i}`).remove();
     }
-    flowchartNotesList.textContent = "";                // Gets rid of the flowchart notes
     academicYearCount = 0;                              // Resets the year count
 }

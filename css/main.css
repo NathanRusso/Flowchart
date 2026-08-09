@@ -247,6 +247,11 @@ input[type="checkbox"] {
 
 #flowchartNotesTitle {
     margin: 10px 0px;
+    display: none;
+}
+
+#flowchartNotesList:hover {
+    display: none;
 }
 
 #flowchartNotesList:hover {
