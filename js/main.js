@@ -4,7 +4,7 @@ import * as load from "/js/load.js";
 
 //------------------------------ DATA BELOW ------------------------------//
 
-const defaultTitle = "GCCIS 2025-2026 Flowchart";
+const defaultTitle = "GCCIS Flowcharts";
 
 let academicYearCount = 0;      // The numbers of years of school currently being listed.
 let transferSection = false;    // Whether or not the transfer section is visible.
@@ -14,6 +14,7 @@ const body = document.body;
 const pageTitle = document.getElementById("pageTitle");
 const fileInput = document.getElementById("fileInput");
 const templateSelect = document.getElementById("templateSelect");
+const yearSelect = document.getElementById("yearSelect");
 const uploadTemplateButton = document.getElementById("uploadTemplateButton");
 const downloadTemplateButton = document.getElementById("downloadTemplateButton");
 const pushYearButton = document.getElementById("pushYearButton");
@@ -29,7 +30,6 @@ const transferYearDiv = document.getElementById("year-0");
 const transferDiv = document.getElementById("transfer");
 const transferDividerDiv = document.getElementById("year-divider-0");
 const allCheckboxes = document.getElementsByName("courseCheckbox");
-load.makeSortable(transferDiv);
 
 const flowchartNotesTitle = document.getElementById("flowchartNotesTitle");
 const flowchartNotesList = document.getElementById("flowchartNotesList");
@@ -37,6 +37,7 @@ const flowchartNotesList = document.getElementById("flowchartNotesList");
 //------------------------------ EVENT LISTENERS BELOW ------------------------------//
 
 templateSelect.addEventListener("change", (event) => getTemplateFlowchart(event.target.value));
+yearSelect.addEventListener("change", (event) => updateTemplateFlowcharts(event.target.value));
 fileInput.addEventListener("change", (event) => processUploadedFile(event.target.files[0]));
 uploadTemplateButton.addEventListener("click", () => fileInput.click());
 downloadTemplateButton.addEventListener("click", downloadTemplate);
@@ -48,6 +49,13 @@ showCheckboxesButton.addEventListener("click", showCheckboxes);
 hideCheckboxesButton.addEventListener("click", hideCheckboxes);
 clearFlowchartButton.addEventListener("click", () => clearFlowchart(defaultTitle, true, true));
 
+//------------------------------ INITIALIZATION BELOW ------------------------------//
+
+load.makeSortable(transferDiv);
+
+// Fill the template dropdown with flowcharts from the current year
+updateTemplateFlowcharts(yearSelect.value);
+
 //------------------------------ FUNCTIONS BELOW ------------------------------//
 
 /**
@@ -57,8 +65,21 @@ clearFlowchartButton.addEventListener("click", () => clearFlowchart(defaultTitle
  */
 async function getTemplateFlowchart(filename) {
     if (!filename) { pageTitle.textContent = defaultTitle; return; };
-    const template  = (await import(`/json/templates/${filename}`, { with: { type: "json" } })).default;
+    const year = yearSelect.value;
+    const template  = (await import(`/json/templates/${year}/${filename}`, { with: { type: "json" } })).default;
     processFlowchart(template, false, true);
+}
+
+function updateTemplateFlowcharts(year) {
+    const pastOption = templateSelect.value;    // Gets the selected flowchart
+    templateSelect.innerHTML = "";              // Clears the dropdown options
+
+    // Adds back the empty option
+    const emptyOption = document.createElement("option");
+    emptyOption.value = "";
+    emptyOption.innerHTML = "Choose Template";
+
+    // TODO
 }
 
 /**
