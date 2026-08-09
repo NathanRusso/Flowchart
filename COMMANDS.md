@@ -69,3 +69,12 @@ docker stop flowchart-test
 ```bash
 docker rm flowchart-test
 ```
+
+## Files
+
+```bash
+cp json/templates/*.json json/templates/2025-2026/
+```
+```bash
+rm json/templates/*.json
+```
