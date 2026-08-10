@@ -77,7 +77,8 @@ function updateTemplateFlowcharts(year) {
     // Adds back the empty option
     const emptyOption = document.createElement("option");
     emptyOption.value = "";
-    emptyOption.innerHTML = "Choose Template";
+    emptyOption.textContent = "Choose Template";
+    templateSelect.append(emptyOption);
 
     // TODO
 }

@@ -125,6 +125,10 @@
     padding-right: 17px;
 }
 
+#transfer {
+    min-height: 100px;
+}
+
 .year {
     display: flex;
 }
