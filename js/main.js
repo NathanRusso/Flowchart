@@ -12,9 +12,9 @@ let uploadedFilename = null;    // The filename of the uploaded file.
 
 const body = document.body;
 const pageTitle = document.getElementById("pageTitle");
-const fileInput = document.getElementById("fileInput");
-const templateSelect = document.getElementById("templateSelect");
 const yearSelect = document.getElementById("yearSelect");
+const templateSelect = document.getElementById("templateSelect");
+const fileInput = document.getElementById("fileInput");
 const uploadTemplateButton = document.getElementById("uploadTemplateButton");
 const downloadTemplateButton = document.getElementById("downloadTemplateButton");
 const pushYearButton = document.getElementById("pushYearButton");
@@ -36,8 +36,8 @@ const flowchartNotesList = document.getElementById("flowchartNotesList");
 
 //------------------------------ EVENT LISTENERS BELOW ------------------------------//
 
-templateSelect.addEventListener("change", (event) => getTemplateFlowchart(event.target.value));
 yearSelect.addEventListener("change", (event) => updateTemplateFlowcharts(event.target.value));
+templateSelect.addEventListener("change", (event) => getTemplateFlowchart(event.target.value));
 fileInput.addEventListener("change", (event) => processUploadedFile(event.target.files[0]));
 uploadTemplateButton.addEventListener("click", () => fileInput.click());
 downloadTemplateButton.addEventListener("click", downloadTemplate);
@@ -57,18 +57,6 @@ load.makeSortable(transferDiv);
 updateTemplateFlowcharts(yearSelect.value);
 
 //------------------------------ FUNCTIONS BELOW ------------------------------//
-
-/**
- * This uploads a flowchart using a preset template.
- * 
- * @param {string} filename - the template flowchart filename
- */
-async function getTemplateFlowchart(filename) {
-    if (!filename) { pageTitle.textContent = defaultTitle; return; };
-    const year = yearSelect.value;
-    const template  = (await import(`/json/templates/${year}/${filename}`, { with: { type: "json" } })).default;
-    processFlowchart(template, false, true);
-}
 
 /**
  * This updates the "Choose Template" dropdown with the templates from the selected year.
@@ -116,6 +104,18 @@ async function updateTemplateFlowcharts(year) {
 
     // Add all outGroups to the dropdown
     templateSelect.append(...Object.values(outGroups));
+}
+
+/**
+ * This uploads a flowchart using a preset template.
+ * 
+ * @param {string} filename - the template flowchart filename
+ */
+async function getTemplateFlowchart(filename) {
+    if (!filename) { pageTitle.textContent = defaultTitle; return; };
+    const year = yearSelect.value;
+    const template  = (await import(`/json/templates/${year}/${filename}`, { with: { type: "json" } })).default;
+    processFlowchart(template, false, true);
 }
 
 /**
