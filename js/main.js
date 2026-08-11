@@ -61,7 +61,7 @@ updateTemplateFlowcharts(yearSelect.value);
 /**
  * This uploads a flowchart using a preset template.
  * 
- * @param {*} filename - the template flowchart filename
+ * @param {string} filename - the template flowchart filename
  */
 async function getTemplateFlowchart(filename) {
     if (!filename) { pageTitle.textContent = defaultTitle; return; };
@@ -70,6 +70,11 @@ async function getTemplateFlowchart(filename) {
     processFlowchart(template, false, true);
 }
 
+/**
+ * This updates the "Choose Template" dropdown with the templates from the selected year.
+ * 
+ * @param {string} year - the selected year to view templates form
+ */
 async function updateTemplateFlowcharts(year) {
     const pastOption = templateSelect.value;    // Gets the selected flowchart
     templateSelect.innerHTML = "";              // Clears the dropdown options
