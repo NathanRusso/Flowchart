@@ -1,5 +1,5 @@
 //------------------------------ IMPORTS BELOW ------------------------------//
-import * as color from "/js/color.js";
+import * as match from "/js/match.js";
 import * as load from "/js/load.js";
 
 //------------------------------ DATA BELOW ------------------------------//
@@ -71,22 +71,46 @@ async function getTemplateFlowchart(filename) {
 }
 
 async function updateTemplateFlowcharts(year) {
-    console.log(year)
     const pastOption = templateSelect.value;    // Gets the selected flowchart
     templateSelect.innerHTML = "";              // Clears the dropdown options
 
     // Adds back the empty option
-    const emptyOption = document.createElement("option");
-    emptyOption.value = "";
-    emptyOption.textContent = "Choose Template";
+    const emptyOption = Object.assign(document.createElement("option"), {
+        textContent: "Choose Template",
+        value: "",
+    });
     templateSelect.append(emptyOption);
 
     // Get the template file names
     const response = await fetch(`/json/templates/${year}`);
     const result = await response.json();
-    const fileNames = result.map(file => file.name);
+    const filenames = result.map(file => file.name);
 
+    // Create all outGroups and options
+    const outGroups = {};
+    filenames.forEach(filename => {
+        const filenameContent = filename.split("_");    // pathway_degree_...
+        const pathwayAndGroup = match.getDisplayPathwayAndGroup(filenameContent[0]);
+        if (pathwayAndGroup == null) return;
+        const formattedPathway = pathwayAndGroup[0];
+        const formattedGroup = pathwayAndGroup[1];
+        const formattedDegree = filenameContent[1] === "bs" ? "BS" : "BS/MS";
 
+        const option = Object.assign(document.createElement("option"), {
+            textContent: `${formattedPathway} ${formattedDegree}`.toUpperCase(),
+            value: filename
+        });
+
+        if (!Object.hasOwn(outGroups, formattedGroup)) {
+            const outGroup = document.createElement("optgroup");
+            outGroup.label = formattedGroup;
+            outGroups[formattedGroup] = outGroup;
+        }
+        outGroups[formattedGroup].append(option);
+    });
+
+    // Add all outGroups to the dropdown
+    templateSelect.append(...Object.values(outGroups));
 }
 
 /**

@@ -1,5 +1,5 @@
 //------------------------------ IMPORTS BELOW ------------------------------//
-import * as color from "/js/color.js";
+import * as match from "/js/match.js";
 
 //------------------------------ DATA BELOW ------------------------------//
 
@@ -194,7 +194,7 @@ export function createCourse(courseInfo) {
         case "class-required": {
             courseDiv.className = "class";
             courseDiv.textContent = `${courseDiscipline}-${courseNumber}\n\n${courseName}`
-            courseDiv.style.borderColor = color.getDisciplineColor(courseDiscipline);
+            courseDiv.style.borderColor = match.getDisciplineColor(courseDiscipline);
             break;
         }
         case "class-input": {
@@ -209,7 +209,7 @@ export function createCourse(courseInfo) {
             const input = createCourseInput(savedCourse);
 
             // Sets the border color and adds the label and input to the course div
-            courseDiv.style.borderColor = color.getAttributeColor(courseAttribute);
+            courseDiv.style.borderColor = match.getAttributeColor(courseAttribute);
             courseDiv.append(label);
             courseDiv.append(input);
             break;
@@ -264,9 +264,9 @@ export function createCourse(courseInfo) {
                     if (optionAttribute) {
                         optionInput.style.display = "inline-block";
                         select.style.height = "50px"; // Extends the hight of the select
-                        courseDiv.style.borderColor = color.getAttributeColor(optionAttribute);
+                        courseDiv.style.borderColor = match.getAttributeColor(optionAttribute);
                     } else {
-                        courseDiv.style.borderColor = color.getDisciplineColor(optionDiscipline);
+                        courseDiv.style.borderColor = match.getDisciplineColor(optionDiscipline);
                     }
                 } else {
                     if (optionAttribute) optionInput.style.display = "none";
@@ -282,12 +282,12 @@ export function createCourse(courseInfo) {
                     label.style.display = "inline";
                     label.textContent = text;
                     select.style.height = "auto";
-                    courseDiv.style.borderColor = color.getDisciplineColor(option.dataset.optionDiscipline);
+                    courseDiv.style.borderColor = match.getDisciplineColor(option.dataset.optionDiscipline);
                 } else { // Option is input
                     label.style.display = "none";
                     label.textContent = "";
                     select.style.height = "50px";
-                    courseDiv.style.borderColor = color.getAttributeColor(option.dataset.optionAttribute);
+                    courseDiv.style.borderColor = match.getAttributeColor(option.dataset.optionAttribute);
                 }
                 
                 for (const [inputIndex, inputObject] of Object.entries(inputObjects)) {
@@ -346,7 +346,7 @@ export function createCourse(courseInfo) {
 
                     // Updates the color and label if there is a sub attribute
                     if (optionAttribute) label.textContent = optionAttribute;
-                    courseDiv.style.borderColor = color.getAttributeColor(optionAttribute ?? courseAttribute);
+                    courseDiv.style.borderColor = match.getAttributeColor(optionAttribute ?? courseAttribute);
                 }
             });
 
@@ -501,7 +501,7 @@ function updateExoticCourseDivs(exoticId, selectedIndex) {
                 select.selectedIndex = selectedIndex;
                 const attribute = select.selectedOptions[0].dataset?.optionAttribute ?? courseAttribute;
                 label.textContent = attribute;
-                courseDiv.style.borderColor = color.getAttributeColor(attribute);
+                courseDiv.style.borderColor = match.getAttributeColor(attribute);
                 courseDiv.style.display = "flex";
             } else {
                 courseDiv.style.display = "none";
