@@ -1,0 +1,481 @@
+{
+    "title": "Cybersecurity BS 2026-2027 Flowchart",
+    "transfer": [],
+    "college": [
+        [
+            [
+                {
+                    "courseType": "class-required",
+                    "discipline": "CSEC",
+                    "number": 140,
+                    "name": "Introduction to Cybersecurity",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "GCIS",
+                    "number": 123,
+                    "name": "Software Development and Problem Solving I",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "MATH",
+                    "number": 181,
+                    "name": "Calculus I",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Global Perspective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Ethical Perspective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "YOPS",
+                    "number": 10,
+                    "name": "RIT 365: RIT Connections",
+                    "completed": false
+                }
+            ],
+            [
+                {
+                    "courseType": "class-required",
+                    "discipline": "GCIS",
+                    "number": 124,
+                    "name": "Software Development and Problem Solving II",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "NSSA",
+                    "number": 241,
+                    "name": "Introduction to Routing and Switching",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "MATH",
+                    "number": 182,
+                    "name": "Calculus II",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "MATH",
+                    "number": 190,
+                    "name": "Discrete Mathematics for Computing",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Writing Intensive: First Year",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Wellness Course",
+                    "completed": false
+                }
+            ],
+            []
+        ],
+        [
+            [
+                {
+                    "courseType": "class-required",
+                    "discipline": "CSEC",
+                    "number": 201,
+                    "name": "Programming for Information Security",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "NSSA",
+                    "number": 221,
+                    "name": "Systems Administration I",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "MATH",
+                    "number": 251,
+                    "name": "Probability and Statistics",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-option-attribute",
+                    "attribute": "Lab Science: Lecture 1",
+                    "selectedIndex": 0,
+                    "options": [
+                        {
+                            "discipline": "BIOG",
+                            "number": 101,
+                            "name": "Explorations in Cellular Biology and Evolution"
+                        },
+                        {
+                            "discipline": "BIOL",
+                            "number": 101,
+                            "name": "General Biology I"
+                        },
+                        {
+                            "discipline": "CHMG",
+                            "number": 141,
+                            "name": "General & Analytical Chemistry I"
+                        },
+                        {
+                            "discipline": "PHYS",
+                            "number": 211,
+                            "name": "University Physics I",
+                            "attribute": "Lab Science 1"
+                        }
+                    ],
+                    "exoticId": 1,
+                    "completed": false
+                },
+                {
+                    "courseType": "class-option-attribute",
+                    "attribute": "Lab Science: Lab 1",
+                    "selectedIndex": 0,
+                    "options": [
+                        {
+                            "discipline": "BIOG",
+                            "number": 103,
+                            "name": "Explorations in Cell Biology & Evolution Lab"
+                        },
+                        {
+                            "discipline": "BIOL",
+                            "number": 103,
+                            "name": "General Biology I Lab"
+                        },
+                        {
+                            "discipline": "CHMG",
+                            "number": 145,
+                            "name": "General & Analytical Chemistry I Lab"
+                        }
+                    ],
+                    "exoticId": 1,
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Social Perspective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "CSEC",
+                    "number": 99,
+                    "name": "Cooperative Education Seminar",
+                    "completed": false
+                }
+            ],
+            [
+                {
+                    "courseType": "class-required",
+                    "discipline": "CSEC",
+                    "number": 202,
+                    "name": "Reverse Engineering Fundamentals",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "NSSA",
+                    "number": 245,
+                    "name": "Network Services",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-option-mix",
+                    "selectedIndex": 0,
+                    "options": [
+                        {
+                            "discipline": "MATH",
+                            "number": 241,
+                            "name": "Linear Algebra"
+                        },
+                        {
+                            "discipline": "STAT",
+                            "number": 257,
+                            "name": "Statistical Inference"
+                        }
+                    ],
+                    "completed": false
+                },
+                {
+                    "courseType": "class-option-attribute",
+                    "attribute": "Lab Science: Lecture 2",
+                    "selectedIndex": 0,
+                    "options": [
+                        {
+                            "discipline": "BIOG",
+                            "number": 102,
+                            "name": "Explorations in Animal and Plant Anatomy and Physiology"
+                        },
+                        {
+                            "discipline": "BIOL",
+                            "number": 102,
+                            "name": "General Biology II"
+                        },
+                        {
+                            "discipline": "CHMG",
+                            "number": 142,
+                            "name": "General & Analytical Chemistry II"
+                        },
+                        {
+                            "discipline": "PHYS",
+                            "number": 212,
+                            "name": "University Physics II",
+                            "attribute": "Lab Science 2"
+                        }
+                    ],
+                    "exoticId": 1,
+                    "completed": false
+                },
+                {
+                    "courseType": "class-option-attribute",
+                    "attribute": "Lab Science: Lab 2",
+                    "selectedIndex": 0,
+                    "options": [
+                        {
+                            "discipline": "BIOG",
+                            "number": 104,
+                            "name": "Explorations in Animal and Plant Anatomy and Physiology Lab"
+                        },
+                        {
+                            "discipline": "BIOL",
+                            "number": 104,
+                            "name": "General Biology II Lab"
+                        },
+                        {
+                            "discipline": "CHMG",
+                            "number": 146,
+                            "name": "General & Analytical Chemistry II Lab"
+                        }
+                    ],
+                    "exoticId": 1,
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Artistic Perspective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Wellness Course",
+                    "completed": false
+                }
+            ],
+            [
+                {
+                    "courseType": "co-op-required",
+                    "discipline": "CSEC",
+                    "number": 499,
+                    "name": "Cooperative Education in CSEC",
+                    "completed": false
+                }
+            ]
+        ],
+        [
+            [
+                {
+                    "courseType": "class-required",
+                    "discipline": "CSCI",
+                    "number": 462,
+                    "name": "Introduction to Cryptography",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "CSEC",
+                    "number": 310,
+                    "name": "Endpoint Security Engineering",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "ISTE",
+                    "number": 230,
+                    "name": "Introduction to Database and Data Modeling",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "PUBL",
+                    "number": 363,
+                    "name": "Cybersecurity Policy and Law",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Open Elective",
+                    "completed": false
+                }
+            ],
+            [
+                {
+                    "courseType": "class-required",
+                    "discipline": "CSEC",
+                    "number": 472,
+                    "name": "Authentication and Security Models",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "CSEC",
+                    "number": 380,
+                    "name": "Principles of Web Application Security",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "CSEC Elective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Immersion",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Open Elective",
+                    "completed": false
+                }
+            ],
+            [
+                {
+                    "courseType": "co-op-required",
+                    "discipline": "CSEC",
+                    "number": 499,
+                    "name": "Cooperative Education in CSEC",
+                    "completed": false
+                }
+            ]
+        ],
+        [
+            [
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "CSEC Elective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "CSEC Elective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-option-mix",
+                    "selectedIndex": 0,
+                    "options": [
+                        {
+                            "discipline": "PHIL",
+                            "number": 102,
+                            "name": "Introduction to Moral Issues"
+                        },
+                        {
+                            "discipline": "PHIL",
+                            "number": 202,
+                            "name": "Foundations of Moral Philosophy"
+                        },
+                        {
+                            "discipline": "PHIL",
+                            "number": 306,
+                            "name": "Professional Ethics"
+                        }
+                    ],
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Immersion",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Open Elective",
+                    "completed": false
+                }
+            ],
+            [
+                {
+                    "courseType": "class-required",
+                    "discipline": "CSEC",
+                    "number": 490,
+                    "name": "Capstone in Cybersecurity",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "CSEC Elective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "CSEC Elective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Immersion",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Open Elective",
+                    "completed": false
+                }
+            ],
+            []
+        ]
+    ],
+    "notes": [
+        "<b>Lab Sciences:</b> Only specific sequences are allowed in Biology, Chemistry or Physics. Please see the CSEC BS course page.",
+        "<b>CSEC Electives:</b> Only specific courses are allowed. Please see the CSEC handbook or talk to an academic advisor."
+    ]
+}
