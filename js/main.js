@@ -70,7 +70,8 @@ async function getTemplateFlowchart(filename) {
     processFlowchart(template, false, true);
 }
 
-function updateTemplateFlowcharts(year) {
+async function updateTemplateFlowcharts(year) {
+    console.log(year)
     const pastOption = templateSelect.value;    // Gets the selected flowchart
     templateSelect.innerHTML = "";              // Clears the dropdown options
 
@@ -80,7 +81,12 @@ function updateTemplateFlowcharts(year) {
     emptyOption.textContent = "Choose Template";
     templateSelect.append(emptyOption);
 
-    // TODO
+    // Get the template file names
+    const response = await fetch(`/json/templates/${year}`);
+    const result = await response.json();
+    const fileNames = result.map(file => file.name);
+
+
 }
 
 /**
