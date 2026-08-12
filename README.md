@@ -60,43 +60,43 @@ Each flowchart is divided into sections by year. Each year has 3 blocks inside o
 ## Current Templates Available
 
 ### Artificial Intelligence (AI)
-- Artificial Intelligence BS (2025-2026)
+- Artificial Intelligence BS (2026-2027)
 
 ### Computing Exploration (CE)
-- Computing Exploration (2025-2026)
+- Computing Exploration (2025-2026, 2026-2027)
 
 ### Computing and Information Technology (CIT)
-- Computing and Information Technology BS (2025-2026)
+- Computing and Information Technology BS (2025-2026, 2026-2027)
 
 ### Computer Science (CS)
-- Computer Science BS (2025-2026)
-- Computer Science BS/MS (2025-2026)
-- Computer Science/Cybersecurity BS/MS (2025-2026)
-- Computer Science/Software Engineering BS/MS (2025-2026)
+- Computer Science BS (2025-2026, 2026-2027)
+- Computer Science BS/MS (2025-2026, 2026-2027)
+- Computer Science/Cybersecurity BS/MS (2025-2026, 2026-2027)
+- Computer Science/Software Engineering BS/MS (2025-2026, 2026-2027)
 
 ### Cybersecurity (CSEC)
-- Cybersecurity BS (2025-2026)
-- Cybersecurity BS/MS (2025-2026)
-- Cybersecurity/STPP BS/MS (2025-2026)
+- Cybersecurity BS (2025-2026, 2026-2027)
+- Cybersecurity BS/MS (2025-2026, 2026-2027)
+- Cybersecurity/STPP BS/MS (2025-2026, 2026-2027)
 
 ### Game Design and Development (GDD)
-- Game Design and Development BS (2025-2026)
-- Game Design and Development BS/MS (2025-2026)
+- Game Design and Development BS (2025-2026, 2026-2027)
+- Game Design and Development BS/MS (2025-2026, 2026-2027)
 
 ### Human-Centered Computing (HCC)
-- Human-Centered Computing BS (2025-2026)
+- Human-Centered Computing BS (2025-2026, 2026-2027)
 
 ### Humanities, Computing, and Design (HCD)
-- Humanities, Computing, and Design BS (2025-2026)
+- Humanities, Computing, and Design BS (2025-2026, 2026-2027)
 
 ### New Media Interactive Development (NMID)
-- New Media Interactive Development BS (2025-2026)
+- New Media Interactive Development BS (2025-2026, 2026-2027)
 
 ### Software Engineering (SE)
-- Software Engineering BS (2025-2026)
-- Software Engineering BS/MS (2025-2026)
-- Software Engineering/Computer Science BS/MS (2025-2026)
-- Software Engineering/Cybersecurity BS/MS (2025-2026)
+- Software Engineering BS (2025-2026, 2026-2027)
+- Software Engineering BS/MS (2025-2026, 2026-2027)
+- Software Engineering/Computer Science BS/MS (2025-2026, 2026-2027)
+- Software Engineering/Cybersecurity BS/MS (2025-2026, 2026-2027)
 
 ## Abbreviations 
 
