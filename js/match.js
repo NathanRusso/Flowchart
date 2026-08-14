@@ -3,7 +3,7 @@
 /**
  * Gets the class border color based on its discipline.
  * 
- * @param {*} discipline - the string discipline
+ * @param {string} discipline - the string discipline
  * @returns the string HTML color
  */
 export function getDisciplineColor(discipline) {
@@ -75,10 +75,11 @@ export function getDisciplineColor(discipline) {
 /**
  * Gets the class border color based on its attribute.
  * 
- * @param {*} attribute - the string attribute
+ * @param {string} attribute - the string attribute
  * @returns the string HTML color
  */
 export function getAttributeColor(attribute) {
+    if (typeof attribute !== "string") return "var(--text-color)";
     if (attribute.includes("Open Elective") || attribute == "Graduate Elective") {
         return "Purple";
     } else if (attribute.includes("Wellness Course")) {
@@ -100,7 +101,7 @@ export function getAttributeColor(attribute) {
     } else if (attribute.includes("DHSS")) {
         return "HotPink";
     } else {
-        return "var(--text-color)"
+        return "var(--text-color)";
     }
 }
 
@@ -108,7 +109,7 @@ export function getAttributeColor(attribute) {
  * Gets a formatted pathway and its group to display in the template dropdown.
  * CSEC must come before CS since CS is included in CSEC.
  * 
- * @param {string'} pathway - the pathway code at the start of templates 
+ * @param {string} pathway - the pathway code at the start of templates 
  * @returns the formatted pathway string and group if there is a match; otherwise null
  */
 export function getDisplayPathwayAndGroup(pathway) {
