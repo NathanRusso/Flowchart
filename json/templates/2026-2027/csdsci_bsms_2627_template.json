@@ -1,0 +1,549 @@
+{
+    "title": "Computer Science/Data Science BS/MS 2026-2027 Flowchart",
+    "transfer": [],
+    "college": [
+        [
+            [
+                {
+                    "courseType": "class-required",
+                    "discipline": "CSCI",
+                    "number": 141,
+                    "name": "Computer Science I",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "MATH",
+                    "number": 181,
+                    "name": "Calculus I",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Writing Intensive: First Year",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Artistic Perspective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Global Perspective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "YOPS",
+                    "number": 10,
+                    "name": "RIT 365: RIT Connections",
+                    "completed": false
+                }
+            ],
+            [
+                {
+                    "courseType": "class-required",
+                    "discipline": "CSCI",
+                    "number": 142,
+                    "name": "Computer Science II",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "MATH",
+                    "number": 182,
+                    "name": "Calculus II",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "MATH",
+                    "number": 190,
+                    "name": "Discrete Mathematics for Computing",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Ethical Perspective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Social Perspective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Wellness Course",
+                    "completed": false
+                }
+            ],
+            []
+        ],
+        [
+            [
+                {
+                    "courseType": "class-option-mix",
+                    "selectedIndex": 0,
+                    "options": [
+                        {
+                            "discipline": "CSCI",
+                            "number": 262,
+                            "name": "Introduction to Computer Science Theory"
+                        },
+                        {
+                            "discipline": "CSCI",
+                            "number": 263,
+                            "name": "Honors Introduction to Computer Science Theory"
+                        }
+                    ],
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "CSCI",
+                    "number": 243,
+                    "name": "Mechanics of Programming",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "MATH",
+                    "number": 251,
+                    "name": "Probability and Statistics",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-option-attribute",
+                    "attribute": "Lab Science: Lecture 1",
+                    "selectedIndex": 0,
+                    "options": [
+                        {
+                            "discipline": "BIOG",
+                            "number": 101,
+                            "name": "Explorations in Cellular Biology and Evolution"
+                        },
+                        {
+                            "discipline": "BIOL",
+                            "number": 101,
+                            "name": "General Biology I"
+                        },
+                        {
+                            "discipline": "CHMG",
+                            "number": 141,
+                            "name": "General & Analytical Chemistry I"
+                        },
+                        {
+                            "discipline": "PHYS",
+                            "number": 211,
+                            "name": "University Physics I",
+                            "attribute": "Lab Science 1"
+                        }
+                    ],
+                    "exoticId": 1,
+                    "completed": false
+                },
+                {
+                    "courseType": "class-option-attribute",
+                    "attribute": "Lab Science: Lab 1",
+                    "selectedIndex": 0,
+                    "options": [
+                        {
+                            "discipline": "BIOG",
+                            "number": 103,
+                            "name": "Explorations in Cell Biology & Evolution Lab"
+                        },
+                        {
+                            "discipline": "BIOL",
+                            "number": 103,
+                            "name": "General Biology I Lab"
+                        },
+                        {
+                            "discipline": "CHMG",
+                            "number": 145,
+                            "name": "General & Analytical Chemistry I Lab"
+                        }
+                    ],
+                    "exoticId": 1,
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Elective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "CSCI",
+                    "number": 99,
+                    "name": "Undergraduate Co-op Seminar",
+                    "completed": false
+                }
+            ],
+            [
+                {
+                    "courseType": "class-option-mix",
+                    "selectedIndex": 0,
+                    "options": [
+                        {
+                            "discipline": "CSCI",
+                            "number": 261,
+                            "name": "Analysis of Algorithms"
+                        },
+                        {
+                            "discipline": "CSCI",
+                            "number": 264,
+                            "name": "Honors Analysis of Algorithms"
+                        }
+                    ],
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "SWEN",
+                    "number": 261,
+                    "name": "Intro to Software Engineering",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "MATH",
+                    "number": 241,
+                    "name": "Linear Algebra",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-option-attribute",
+                    "attribute": "Lab Science: Lecture 2",
+                    "selectedIndex": 0,
+                    "options": [
+                        {
+                            "discipline": "BIOG",
+                            "number": 102,
+                            "name": "Explorations in Animal and Plant Anatomy and Physiology"
+                        },
+                        {
+                            "discipline": "BIOL",
+                            "number": 102,
+                            "name": "General Biology II"
+                        },
+                        {
+                            "discipline": "CHMG",
+                            "number": 142,
+                            "name": "General & Analytical Chemistry II"
+                        },
+                        {
+                            "discipline": "PHYS",
+                            "number": 212,
+                            "name": "University Physics II",
+                            "attribute": "Lab Science 2"
+                        }
+                    ],
+                    "exoticId": 1,
+                    "completed": false
+                },
+                {
+                    "courseType": "class-option-attribute",
+                    "attribute": "Lab Science: Lab 2",
+                    "selectedIndex": 0,
+                    "options": [
+                        {
+                            "discipline": "BIOG",
+                            "number": 104,
+                            "name": "Explorations in Animal and Plant Anatomy and Physiology Lab"
+                        },
+                        {
+                            "discipline": "BIOL",
+                            "number": 104,
+                            "name": "General Biology II Lab"
+                        },
+                        {
+                            "discipline": "CHMG",
+                            "number": 146,
+                            "name": "General & Analytical Chemistry II Lab"
+                        }
+                    ],
+                    "exoticId": 1,
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Scientific Principles Perspective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Wellness Course",
+                    "completed": false
+                }
+            ],
+            [
+                {
+                    "courseType": "co-op-required",
+                    "discipline": "CSCI",
+                    "number": 488,
+                    "name": "CS Undergraduate Summer Co-op",
+                    "completed": false
+                }
+            ]
+        ],
+        [
+            [
+                {
+                    "courseType": "class-required",
+                    "discipline": "CSCI",
+                    "number": 331,
+                    "name": "Intro to Artificial Intelligence",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "CSCI",
+                    "number": 320,
+                    "name": "Principles of Data Management",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "CSCI",
+                    "number": 250,
+                    "name": "Concept of Computer Systems",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Open Elective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Immersion",
+                    "completed": false
+                }
+            ],
+            [
+                {
+                    "courseType": "co-op-required",
+                    "discipline": "CSCI",
+                    "number": 499,
+                    "name": "CS Undergraduate Semester Co-op",
+                    "completed": false
+                }
+            ],
+            []
+        ],
+        [
+            [
+                {
+                    "courseType": "class-required",
+                    "discipline": "DSCI",
+                    "number": 633,
+                    "name": "Foundations of Data Science and Analytics",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "SWEN",
+                    "number": 601,
+                    "name": "Software Construction",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "CSCI",
+                    "number": 344,
+                    "name": "Programming Language Concepts",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Immersion",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Open Elective",
+                    "completed": false
+                }
+            ],
+            [
+                {
+                    "courseType": "class-required",
+                    "discipline": "CSCI",
+                    "number": 472,
+                    "name": "Historical & Current Perspectives in CS",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "CS Elective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "STAT",
+                    "number": 614,
+                    "name": "Applied Statistics",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Open Elective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Open Elective",
+                    "completed": false
+                }
+            ],
+            []
+        ],
+        [
+            [
+                {
+                    "courseType": "co-op-required",
+                    "discipline": "CSCI",
+                    "number": 499,
+                    "name": "CS Undergraduate Semester Co-op",
+                    "completed": false
+                }
+            ],
+            [
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "CS Cluster Elective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "CS Cluster Elective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "CS Elective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Immersion",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Elective",
+                    "completed": false
+                }
+            ],
+            []
+        ],
+        [
+            [
+                {
+                    "courseType": "class-required",
+                    "discipline": "DSCI",
+                    "number": 601,
+                    "name": "Applied Data Science I",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "DSCI",
+                    "number": 644,
+                    "name": "Software Engineering for Data Science",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "ISTE",
+                    "number": 608,
+                    "name": "Database Design And Implementation",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "DSCI Graduate Elective",
+                    "completed": false
+                }
+            ],
+            [
+                {
+                    "courseType": "class-required",
+                    "discipline": "DSCI",
+                    "number": 602,
+                    "name": "Applied Data Science II",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "DSCI Graduate Elective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "DSCI Graduate Elective",
+                    "completed": false
+                }
+            ],
+            []
+        ]
+    ],
+    "notes": [
+        "<b>Writing Intensive Courses:</b> Students must take 3 courses: 1 First Year (UWRT-150 or ISTE-110), 1 Gen Ed, & 1 program specific (CSCI-472)",
+        "<b>Lab Sciences:</b> Only specific sequences are allowed in Biology, Chemistry or Physics. Please see the CS BS/MS course page.",
+        "<b>DSCI Electives:</b> Only specific courses are allowed. Please see the CS handbook or talk to an academic advisor.",
+        "<b>CS/DSCI Electives:</b> Only specific courses are allowed. Please see the Data Science MS Advisor for a list of CSCI graduate courses that can be chosen to meet this requirement.",
+        "<b>SWEN Waive:</b> CS students have the SWEN 601 requirement for the MS in Data Science waived based on their prior coursework, and in its place a 4th graduate elective course is taken.",
+        "<b>Condition:</b> If approved DSCI Graduate Electives that are Computer Science (CSCI) courses are selected as all of the double-counts, the BS double-count can satisfy CS Elective requirements instead of Open Electives.  In this case, the double-counting courses would be the ** CS Elective courses in Year 4 along with the * CS Elective course in Year 5.  DSCI 633 and STAT 614 would still be taken as listed in Year 4, but would contribute only to the MS DSCI credit total.  Correspondingly, two DSCI Graduate Elective courses listed in Year 6 convert to Open Elective courses contributing only to the BS in CS." 
+    ]
+}

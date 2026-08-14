@@ -72,12 +72,13 @@ Each flowchart is divided into sections by year. Each year has 3 blocks inside o
 - Computer Science BS (2025-2026, 2026-2027)
 - Computer Science BS/MS (2025-2026, 2026-2027)
 - Computer Science/Cybersecurity BS/MS (2025-2026, 2026-2027)
+- Computer Science/Data Science BS/MS (2026-2027)
 - Computer Science/Software Engineering BS/MS (2025-2026, 2026-2027)
 
 ### Cybersecurity (CSEC)
 - Cybersecurity BS (2025-2026, 2026-2027)
 - Cybersecurity BS/MS (2025-2026, 2026-2027)
-- Cybersecurity/STPP BS/MS (2025-2026, 2026-2027)
+- Cybersecurity/Science, Technology, and Public Policy BS/MS (2025-2026, 2026-2027)
 
 ### Game Design and Development (GDD)
 - Game Design and Development BS (2025-2026, 2026-2027)
@@ -102,16 +103,18 @@ Each flowchart is divided into sections by year. Each year has 3 blocks inside o
 
 ### Pathway Abbreviations
 
-- **AI** – Artificial Intelligence  
-- **CE** – Computing Exploration  
-- **CIT** – Computing and Information Technology  
-- **CS** – Computer Science  
-- **CSEC** – Cybersecurity  
-- **GDD** – Game Design and Development  
-- **HCC** – Human-Centered Computing  
-- **HCD** – Humanities, Computing, and Design  
-- **NMID** – New Media Interactive Development  
-- **SE** – Software Engineering  
+- **AI** – Artificial Intelligence
+- **CE** – Computing Exploration
+- **CIT** – Computing and Information Technology
+- **CS** – Computer Science
+- **CSEC** – Cybersecurity
+- **DSCI** - Data Science
+- **GDD** – Game Design and Development
+- **HCC** – Human-Centered Computing
+- **HCD** – Humanities, Computing, and Design
+- **NMID** – New Media Interactive Development
+- **SE** – Software Engineering
+- **STPP** - Science, Technology, and Public Policy
 
 ### Degree Abbreviations
 

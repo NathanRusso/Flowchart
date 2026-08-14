@@ -42,6 +42,7 @@ export function getDisciplineColor(discipline) {
         case "CINT":
         case "CSCI":
         case "CSEC":
+        case "DSCI":
         case "GCIS":
         case "IDAI":
         case "IGME":
@@ -84,7 +85,7 @@ export function getAttributeColor(attribute) {
         return "Gold";
     } else if (attribute.includes("AI") || attribute.includes("IDAI") || attribute.includes("CIT")  
             || attribute.includes("CS") || attribute.includes("CSCI") || attribute.includes("CSEC") 
-            || attribute.includes("Engineering Elective")
+            || attribute.includes("DSCI") || attribute.includes("Engineering Elective")
             || attribute.includes("GCIS") || attribute.includes("GDD") || attribute.includes("HCC") 
             || attribute.includes("IGM") || attribute.includes("IGME") || attribute.includes("ISTE") 
             || attribute.includes("NMID") || attribute.includes("NSSA") || attribute.includes("SE") 
@@ -122,6 +123,8 @@ export function getDisplayPathwayAndGroup(pathway) {
 			return ["CS", "Computer Science"];
 		case "cscsec":
 			return ["CS/CSEC", "Computer Science"];
+        case "csdsci":
+            return ["CS/DSCI", "Computer Science"]
 		case "csse":
 			return ["CS/SE", "Computer Science"];
 		case "csec":
