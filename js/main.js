@@ -75,7 +75,7 @@ async function updateTemplateFlowcharts(year) {
     templateSelect.append(emptyOption);
 
     // Get the template file names
-    const response = await fetch(`/json/templates/${year}`);
+    const response = await fetch(`/json/templates/${year}/`);
     const result = await response.json();
     const filenames = result.map(file => file.name);
 
