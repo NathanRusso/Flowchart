@@ -1,10 +1,10 @@
 //------------------------------ IMPORTS BELOW ------------------------------//
-import * as color from "/js/color.js";
+import * as match from "/js/match.js";
 import * as load from "/js/load.js";
 
 //------------------------------ DATA BELOW ------------------------------//
 
-const defaultTitle = "GCCIS 2025-2026 Flowchart";
+const defaultTitle = "GCCIS Flowcharts";
 
 let academicYearCount = 0;      // The numbers of years of school currently being listed.
 let transferSection = false;    // Whether or not the transfer section is visible.
@@ -12,8 +12,9 @@ let uploadedFilename = null;    // The filename of the uploaded file.
 
 const body = document.body;
 const pageTitle = document.getElementById("pageTitle");
-const fileInput = document.getElementById("fileInput");
+const yearSelect = document.getElementById("yearSelect");
 const templateSelect = document.getElementById("templateSelect");
+const fileInput = document.getElementById("fileInput");
 const uploadTemplateButton = document.getElementById("uploadTemplateButton");
 const downloadTemplateButton = document.getElementById("downloadTemplateButton");
 const pushYearButton = document.getElementById("pushYearButton");
@@ -29,13 +30,13 @@ const transferYearDiv = document.getElementById("year-0");
 const transferDiv = document.getElementById("transfer");
 const transferDividerDiv = document.getElementById("year-divider-0");
 const allCheckboxes = document.getElementsByName("courseCheckbox");
-load.makeSortable(transferDiv);
 
 const flowchartNotesTitle = document.getElementById("flowchartNotesTitle");
 const flowchartNotesList = document.getElementById("flowchartNotesList");
 
 //------------------------------ EVENT LISTENERS BELOW ------------------------------//
 
+yearSelect.addEventListener("change", (event) => updateTemplateFlowcharts(event.target.value));
 templateSelect.addEventListener("change", (event) => getTemplateFlowchart(event.target.value));
 fileInput.addEventListener("change", (event) => processUploadedFile(event.target.files[0]));
 uploadTemplateButton.addEventListener("click", () => fileInput.click());
@@ -48,16 +49,72 @@ showCheckboxesButton.addEventListener("click", showCheckboxes);
 hideCheckboxesButton.addEventListener("click", hideCheckboxes);
 clearFlowchartButton.addEventListener("click", () => clearFlowchart(defaultTitle, true, true));
 
+//------------------------------ INITIALIZATION BELOW ------------------------------//
+
+load.makeSortable(transferDiv);
+
+// Fill the template dropdown with flowcharts from the current year
+updateTemplateFlowcharts(yearSelect.value);
+
 //------------------------------ FUNCTIONS BELOW ------------------------------//
+
+/**
+ * This updates the "Choose Template" dropdown with the templates from the selected year.
+ * 
+ * @param {string} year - the selected year to view templates form
+ */
+async function updateTemplateFlowcharts(year) {
+    const pastOption = templateSelect.value;    // Gets the selected flowchart
+    templateSelect.innerHTML = "";              // Clears the dropdown options
+
+    // Adds back the empty option
+    const emptyOption = Object.assign(document.createElement("option"), {
+        textContent: "Choose Template",
+        value: "",
+    });
+    templateSelect.append(emptyOption);
+
+    // Get the template file names
+    const response = await fetch(`/json/templates/${year}`);
+    const result = await response.json();
+    const filenames = result.map(file => file.name);
+
+    // Create all outGroups and options
+    const outGroups = {};
+    filenames.forEach(filename => {
+        const filenameContent = filename.split("_");    // pathway_degree_...
+        const pathwayAndGroup = match.getDisplayPathwayAndGroup(filenameContent[0]);
+        if (pathwayAndGroup == null) return;
+        const formattedPathway = pathwayAndGroup[0];
+        const formattedGroup = pathwayAndGroup[1];
+        const formattedDegree = filenameContent[0] === "ce" ? "" : (filenameContent[1] === "bs" ? "BS" : "BS/MS");
+
+        const option = Object.assign(document.createElement("option"), {
+            textContent: `${formattedPathway} ${formattedDegree}`.toUpperCase(),
+            value: filename
+        });
+
+        if (!Object.hasOwn(outGroups, formattedGroup)) {
+            const outGroup = document.createElement("optgroup");
+            outGroup.label = formattedGroup;
+            outGroups[formattedGroup] = outGroup;
+        }
+        outGroups[formattedGroup].append(option);
+    });
+
+    // Add all outGroups to the dropdown
+    templateSelect.append(...Object.values(outGroups));
+}
 
 /**
  * This uploads a flowchart using a preset template.
  * 
- * @param {*} filename - the template flowchart filename
+ * @param {string} filename - the template flowchart filename
  */
 async function getTemplateFlowchart(filename) {
     if (!filename) { pageTitle.textContent = defaultTitle; return; };
-    const template  = (await import(`/json/templates/${filename}`, { with: { type: "json" } })).default;
+    const year = yearSelect.value;
+    const template  = (await import(`/json/templates/${year}/${filename}`, { with: { type: "json" } })).default;
     processFlowchart(template, false, true);
 }
 

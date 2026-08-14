@@ -8,6 +8,10 @@
     font-family: inherit;
 }
 
+#yearSelect {
+    background-color: DarkRed;
+}
+
 #templateSelect {
     background-color: DarkRed;
 }

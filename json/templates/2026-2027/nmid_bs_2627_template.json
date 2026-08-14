@@ -1,52 +1,42 @@
 {
-    "title": "Artificial Intelligence BS 2025-2026 Flowchart",
+    "title": "New Media Interactive Development BS 2026-2027 Flowchart",
     "transfer": [],
     "college": [
         [
             [
                 {
                     "courseType": "class-required",
-                    "discipline": "IDAI",
+                    "discipline": "IGME",
                     "number": 101,
-                    "name": "AI Explorations",
+                    "name": "NMID and Algorithmic Problem Solving I",
                     "completed": false
                 },
                 {
-                    "courseType": "class-option-mix",
-                    "selectedIndex": 0,
-                    "options": [
-                        {
-                            "discipline": "GCIS",
-                            "number": 123,
-                            "name": "Software Development and Problem Solving I"
-                        },
-                        {
-                            "discipline": "CSCI",
-                            "number": 141,
-                            "name": "Computer Science I"
-                        }
-                    ],
+                    "courseType": "class-required",
+                    "discipline": "IGME",
+                    "number": 110,
+                    "name": "Introduction to Interactive Media",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "NMDE",
+                    "number": 111,
+                    "name": "New Media Design Survey I",
                     "completed": false
                 },
                 {
                     "courseType": "class-required",
                     "discipline": "MATH",
-                    "number": 181,
-                    "name": "Calculus I",
-                    "completed": false
-                },
-                {
-                    "courseType": "class-required",
-                    "discipline": "UWRT",
-                    "number": 150,
-                    "name": "FYW: Writing Seminar",
+                    "number": 131,
+                    "name": "Discrete Mathematics",
                     "completed": false
                 },
                 {
                     "courseType": "class-input",
                     "discipline": "",
                     "number": null,
-                    "attribute": "Gen Ed: Global Perspective",
+                    "attribute": "Gen Ed: First Year Writing",
                     "completed": false
                 },
                 {
@@ -60,57 +50,30 @@
             [
                 {
                     "courseType": "class-required",
-                    "discipline": "IDAI",
-                    "number": 110,
-                    "name": "AI Tools and Techniques",
+                    "discipline": "IGME",
+                    "number": 102,
+                    "name": "NMID and Algorithmic Problem Solving II",
                     "completed": false
                 },
                 {
-                    "courseType": "class-option-mix",
-                    "selectedIndex": 0,
-                    "options": [
-                        {
-                            "discipline": "GCIS",
-                            "number": 124,
-                            "name": "Software Development and Problem Solving II"
-                        },
-                        {
-                            "discipline": "CSCI",
-                            "number": 142,
-                            "name": "Computer Science II"
-                        }
-                    ],
+                    "courseType": "class-required",
+                    "discipline": "NMDE",
+                    "number": 112,
+                    "name": "New Media Design Survey II",
                     "completed": false
                 },
                 {
                     "courseType": "class-required",
                     "discipline": "MATH",
-                    "number": 182,
-                    "name": "Calculus II",
+                    "number": 185,
+                    "name": "Mathematics of Graphical Simulation I",
                     "completed": false
                 },
                 {
-                    "courseType": "class-option-mix",
-                    "selectedIndex": 0,
-                    "options": [
-                        {
-                            "discipline": "MATH",
-                            "number": 190,
-                            "name": "Discrete Mathematics for Computing"
-                        },
-                        {
-                            "discipline": "MATH",
-                            "number": 200,
-                            "name": "Discrete Mathematics and Introduction to Proofs"
-                        }
-                    ],
-                    "completed": false
-                },
-                {
-                    "courseType": "class-required",
-                    "discipline": "PSYC",
-                    "number": 101,
-                    "name": "Introduction to Psychology",
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Artistic Perspective",
                     "completed": false
                 },
                 {
@@ -126,75 +89,27 @@
         [
             [
                 {
-                    "courseType": "class-required",
-                    "discipline": "IDAI",
-                    "number": 202,
-                    "name": "Problem Solving in Artificial Intelligence",
+                    "courseType": "class-option-mix",
+                    "selectedIndex": 0,
+                    "options": [
+                        {
+                            "discipline": "IGME",
+                            "number": 230,
+                            "name": "web Design and Implementation"
+                        },
+                        {
+                            "discipline": "IGME",
+                            "number": 235,
+                            "name": "Introduction to Web Technology for Game Developers"
+                        }
+                    ],
                     "completed": false
                 },
                 {
                     "courseType": "class-required",
-                    "discipline": "SWEN",
-                    "number": 261,
-                    "name": "Introduction to Software Engineering",
-                    "completed": false
-                },
-                {
-                    "courseType": "class-required",
-                    "discipline": "MATH",
-                    "number": 251,
-                    "name": "Probability and Statistics",
-                    "completed": false
-                },
-                {
-                    "courseType": "class-required",
-                    "discipline": "PSYC",
-                    "number": 223,
-                    "name": "Cognitive Psychology",
-                    "completed": false
-                },
-                {
-                    "courseType": "class-input",
-                    "discipline": "",
-                    "number": null,
-                    "attribute": "Gen Ed: Natural Science Inquiry Perspective",
-                    "completed": false
-                },
-                {
-                    "courseType": "class-required",
-                    "discipline": "IDAI",
-                    "number": 99,
-                    "name": "Co-Op Preparation Seminar",
-                    "completed": false
-                }
-            ],
-            [
-                {
-                    "courseType": "class-required",
-                    "discipline": "ISTE",
-                    "number": 262,
-                    "name": "Foundations of Human Centered Computing",
-                    "completed": false
-                },
-                {
-                    "courseType": "class-required",
-                    "discipline": "GCIS",
-                    "number": 350,
-                    "name": "Artificial Intelligence and Law",
-                    "completed": false
-                },
-                {
-                    "courseType": "class-required",
-                    "discipline": "CSCI",
-                    "number": 331,
-                    "name": "Introduction to Artificial Intelligence",
-                    "completed": false
-                },
-                {
-                    "courseType": "class-required",
-                    "discipline": "MATH",
-                    "number": 241,
-                    "name": "Linear Algebra",
+                    "discipline": "IGME",
+                    "number": 201,
+                    "name": "NMID and Algorithmic Problem Solving III",
                     "completed": false
                 },
                 {
@@ -202,16 +117,82 @@
                     "selectedIndex": 0,
                     "options": [
                         {
-                            "discipline": "COMM",
-                            "number": 142,
-                            "name": "Introduction to Technical Communication"
+                            "discipline": "MATH",
+                            "number": 171,
+                            "name": "Calculus A"
                         },
                         {
-                            "discipline": "COMM",
-                            "number": 201,
-                            "name": "Public Speaking"
+                            "discipline": "MATH",
+                            "number": 257,
+                            "name": "Calculus I"
+                        },
+                        {
+                            "discipline": "STAT",
+                            "number": 145,
+                            "name": "Introduction to Statistics I"
                         }
                     ],
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Ethical Perspective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Global Perspective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "IGME",
+                    "number": 99,
+                    "name": "Co-op Preparation Workshop",
+                    "completed": false
+                }
+            ],
+            [
+                {
+                    "courseType": "class-option-mix",
+                    "selectedIndex": 0,
+                    "options": [
+                        {
+                            "discipline": "IGME",
+                            "number": 330,
+                            "name": "Rich Media Web Application Development I"
+                        },
+                        {
+                            "discipline": "IGME",
+                            "number": "330H",
+                            "name": "Honors Rich Media Web Application Development I"
+                        }
+                    ],
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "IGME",
+                    "number": 236,
+                    "name": "Experience Design for Game and Media",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "IGME",
+                    "number": 202,
+                    "name": "Interactive Media Development",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Social Perspective",
                     "completed": false
                 },
                 {
@@ -232,9 +213,9 @@
             [
                 {
                     "courseType": "co-op-required",
-                    "discipline": "IDAI",
+                    "discipline": "IGME",
                     "number": 499,
-                    "name": "Cooperative Education in Artificial Intelligence",
+                    "name": "Undergraduate Co-op",
                     "completed": false
                 }
             ]
@@ -243,23 +224,23 @@
             [
                 {
                     "courseType": "class-required",
-                    "discipline": "IDAI",
-                    "number": 360,
-                    "name": "Optimization Algorithms",
+                    "discipline": "IGME",
+                    "number": 470,
+                    "name": "Physical Computing & Alternative Interfaces",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "IGME",
+                    "number": 430,
+                    "name": "Rich Media Web Applications Development II",
                     "completed": false
                 },
                 {
                     "courseType": "class-required",
                     "discipline": "ISTE",
-                    "number": 476,
-                    "name": "Visual Analytics",
-                    "completed": false
-                },
-                {
-                    "courseType": "class-required",
-                    "discipline": "CSCI",
-                    "number": 335,
-                    "name": "Machine Learning",
+                    "number": 230,
+                    "name": "Introduction to Database and Data Modeling",
                     "completed": false
                 },
                 {
@@ -280,43 +261,38 @@
             [
                 {
                     "courseType": "class-required",
-                    "discipline": "IDAI",
-                    "number": 444,
-                    "name": "Interactive Machine and Reinforcement Learning",
+                    "discipline": "IGME",
+                    "number": 480,
+                    "name": "Current Topics in Interactive Development",
                     "completed": false
                 },
                 {
                     "courseType": "class-option-mix",
                     "selectedIndex": 0,
                     "options": [
+                        {
+                            "discipline": "IGME",
+                            "number": 340,
+                            "name": "Multi-platform Media App Development"
+                        },
                         {
                             "discipline": "ISTE",
-                            "number": 230,
-                            "name": "Introduction to Database and Data Modeling"
+                            "number": 454,
+                            "name": "Mobile Application Development I"
                         },
                         {
-                            "discipline": "SWEN",
-                            "number": 344,
-                            "name": "Engineering of Web Based Software Systems"
+                            "discipline": "ISTE",
+                            "number": 456,
+                            "name": "Mobile Application Development II"
                         }
                     ],
                     "completed": false
                 },
                 {
-                    "courseType": "class-option-mix",
-                    "selectedIndex": 0,
-                    "options": [
-                        {
-                            "discipline": "LING",
-                            "number": 351,
-                            "name": "Language Technology and Large Language Models"
-                        },
-                        {
-                            "discipline": "LING",
-                            "number": 581,
-                            "name": "Natural Language Processing I"
-                        }
-                    ],
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Natural Science Inquiry Perspective",
                     "completed": false
                 },
                 {
@@ -337,9 +313,9 @@
             [
                 {
                     "courseType": "co-op-required",
-                    "discipline": "IDAI",
+                    "discipline": "IGME",
                     "number": 499,
-                    "name": "Cooperative Education in Artificial Intelligence",
+                    "name": "Undergraduate Co-op",
                     "completed": false
                 }
             ]
@@ -348,30 +324,30 @@
             [
                 {
                     "courseType": "class-required",
-                    "discipline": "CSEC",
-                    "number": 521,
-                    "name": "Security of AI",
+                    "discipline": "IGME",
+                    "number": 587,
+                    "name": "New Media Interactive Development Capstone I",
                     "completed": false
                 },
                 {
                     "courseType": "class-input",
                     "discipline": "",
                     "number": null,
-                    "attribute": "AI Elective",
+                    "attribute": "NMID Advanced Elective",
                     "completed": false
                 },
                 {
                     "courseType": "class-input",
                     "discipline": "",
                     "number": null,
-                    "attribute": "AI Elective",
+                    "attribute": "Gen Ed: Immersion",
                     "completed": false
                 },
                 {
                     "courseType": "class-input",
                     "discipline": "",
                     "number": null,
-                    "attribute": "Gen Ed: Ethical Perspective",
+                    "attribute": "Gen Ed: Elective",
                     "completed": false
                 },
                 {
@@ -385,30 +361,30 @@
             [
                 {
                     "courseType": "class-required",
-                    "discipline": "IDAI",
-                    "number": 490,
-                    "name": "AI Team Capstone",
-                    "completed": false
-                },
-                {
-                    "courseType": "class-required",
-                    "discipline": "IDAI",
-                    "number": 485,
-                    "name": "Concurrent and Distributed Artificial Intelligence",
+                    "discipline": "IGME",
+                    "number": 588,
+                    "name": "New Media Interactive Development Capstone II",
                     "completed": false
                 },
                 {
                     "courseType": "class-input",
                     "discipline": "",
                     "number": null,
-                    "attribute": "Gen Ed: Artistic Perspective",
+                    "attribute": "NMID Advanced Elective",
                     "completed": false
                 },
                 {
                     "courseType": "class-input",
                     "discipline": "",
                     "number": null,
-                    "attribute": "Gen Ed: Immersion",
+                    "attribute": "Gen Ed: Elective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Open Elective",
                     "completed": false
                 },
                 {
@@ -423,6 +399,6 @@
         ]
     ],
     "notes": [
-        "<b>AI Electives:</b> Only specific courses are allowed. Please see the AI BS course page."
+        "<b>NMID Advanced Electives:</b> Only specific courses are allowed. Please see the NMID course page."
     ]
 }

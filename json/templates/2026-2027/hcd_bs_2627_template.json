@@ -1,0 +1,381 @@
+{
+    "title": "Humanities, Computing, and Design BS 2026-2027 Flowchart",
+    "transfer": [],
+    "college": [
+        [
+            [
+                {
+                    "courseType": "class-required",
+                    "discipline": "DHSS",
+                    "number": 101,
+                    "name": "Computation and Culture",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "DHSS",
+                    "number": 200,
+                    "name": "DHSS Seminar",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-option-mix",
+                    "selectedIndex": 0,
+                    "options": [
+                        {
+                            "discipline": "IGME",
+                            "number": 101,
+                            "name": "Interactive Design and Problem Solving I"
+                        },
+                        {
+                            "discipline": "GCIS",
+                            "number": 123,
+                            "name": "Software Development and Problem Solving I"
+                        }
+                    ],
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Ethical Perspective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Writing Intensive: First Year",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "YOPS",
+                    "number": 10,
+                    "name": "RIT 365: RIT Connections",
+                    "completed": false
+                }
+            ],
+            [
+                {
+                    "courseType": "class-required",
+                    "discipline": "DHSS",
+                    "number": 102,
+                    "name": "Industrial Origins of the Digital Age",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "ISTE",
+                    "number": 140,
+                    "name": "Web & Mobile I",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Artistic Perspective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Social Perspective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Elective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Wellness Course",
+                    "completed": false
+                }
+            ],
+            []
+        ],
+        [
+            [
+                {
+                    "courseType": "class-required",
+                    "discipline": "ITDL",
+                    "number": 102,
+                    "name": "Career Prep for Liberal Arts Majors",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "ISTE",
+                    "number": 240,
+                    "name": "Web & Mobile II",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "NMDE",
+                    "number": 111,
+                    "name": "New Media Design Digital Survey I",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "STAT",
+                    "number": 145,
+                    "name": "Introduction to Statistics I",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Global Perspective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Natural Science Inquiry Perspective",
+                    "completed": false
+                }
+            ],
+            [
+                {
+                    "courseType": "class-required",
+                    "discipline": "DHSS",
+                    "number": 103,
+                    "name": "Ethics in the Digital Era",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "ISTE",
+                    "number": 230,
+                    "name": "Introduction to Database and Data Modeling",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-required",
+                    "discipline": "NMDE",
+                    "number": 112,
+                    "name": "New Media Design Digital Survey II",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Mathematical Perspective B",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Immersion",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Wellness Course",
+                    "completed": false
+                }
+            ],
+            []
+        ],
+        [
+            [
+                {
+                    "courseType": "class-required",
+                    "discipline": "DHSS",
+                    "number": 200,
+                    "name": "DHSS Seminar (HCD Prosem Leadership)",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "DHSS Project Course",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-option-mix",
+                    "selectedIndex": 0,
+                    "options": [
+                        {
+                            "discipline": "IGME",
+                            "number": 382,
+                            "name": "Maps, Mapping and Geospatial Technologies"
+                        },
+                        {
+                            "discipline": "IGME",
+                            "number": 384,
+                            "name": "Introduction to Geographic Information Systems"
+                        }
+                    ],
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Scientific Principles Perspective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Immersion",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Immersion",
+                    "completed": false
+                }
+            ],
+            [
+                {
+                    "courseType": "class-required",
+                    "discipline": "DHSS",
+                    "number": 377,
+                    "name": "Media Narrative",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "DHSS Project Course",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "DHSS Professional Elective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "DHSS Professional Elective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Elective",
+                    "completed": false
+                }
+            ],
+            [
+                {
+                    "courseType": "co-op-required",
+                    "discipline": "DHSS",
+                    "number": 499,
+                    "name": "DHSS Co-op",
+                    "completed": false
+                }
+            ]
+        ],
+        [
+            [
+                {
+                    "courseType": "class-required",
+                    "discipline": "DHSS",
+                    "number": 489,
+                    "name": "DHSS Capstone I",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Elective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Elective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Open Electives",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Open Electives",
+                    "completed": false
+                }
+            ],
+            [
+                {
+                    "courseType": "class-required",
+                    "discipline": "DHSS",
+                    "number": 489,
+                    "name": "DHSS Capstone II",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Elective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Gen Ed: Elective",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Open Electives",
+                    "completed": false
+                },
+                {
+                    "courseType": "class-input",
+                    "discipline": "",
+                    "number": null,
+                    "attribute": "Open Electives",
+                    "completed": false
+                }
+            ],
+            []
+        ]
+    ],
+    "notes": [
+        "<b>DHSS Project Courses:</b> Only specific courses are allowed. Please see the HCD course page.",
+        "<b>DHSS Professional Electives:</b> Only specific courses are allowed. Please see the HCD course page."
+    ]
+}

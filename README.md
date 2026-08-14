@@ -22,7 +22,7 @@ Table of Contents:
 
 Each flowchart represents a specific GCCIS pathway that one can pursue while at RIT. Each of the provided [templates](#current-templates-available) is set up with all of the required [courses (classes and co-ops)](#course-types) needed to complete the degree.
 
-Users can choose a template from the [available templates](#current-templates-available). Once selected, they can move the course squares around to match the semesters in which the classes were taken. Then, they can fill in any of the empty course slots or set any of the dropdown courses with classes they have taken. Once satisfied, the flowchart can be saved into the user's file system. Finally, when wanting to view or edit the flowchart again, the user can upload the template back to the website.
+Users can choose a template from the [available templates](#current-templates-available) along with the academic year to get the desired version. Once selected, they can move the course squares around to match the semesters in which the classes were taken. Then, they can fill in any of the empty course slots or set any of the dropdown courses with classes they have taken. Once satisfied, the flowchart can be saved into the user's file system. Finally, when wanting to view or edit the flowchart again, the user can upload the template back to the website.
 
 Additionally, users can click on a course to view more information, including its full name, number of credits, and description.
 
@@ -31,16 +31,17 @@ Additionally, users can click on a course to view more information, including it
 Each flowchart is divided into sections by year. Each year has 3 blocks inside of it that represent the Fall, Spring, and Summer semesters. Each semester block can hold any number of [classes](#classes) or a single [co-op](#co-ops). Additionally, a hidden transfer section can be revealed, which exists as its own standalone section with a single block inside. This can be used to allocate the classes that were completed upon transferring credits, such as AP classes or classes from other colleges.
 
 ### Buttons and Dropdowns
-1. **Choose Template** - A dropdown with all [available templates](#current-templates-available) that will load prebuilt flowcharts
-2. **Upload Flowchart** - A button that allows you to upload a saved template flowchart
-3. **Save Template** - A button that downloads the current flowchart with all its changes
-4. **Add Year** - A button that adds a year section below the lowest year section
-5. **Remove Year** - A button that removes the lowest year section, deleting all data inside of it
-6. **Show Transfer** - A button that shows the transfer section
-7. **Hide Transfer** - A button that hides the transfer section, saving all data inside of it
-8. **Show Checkboxes** - A button that shows the course checkboxes
-9. **Hide Checkboxes** - A button that hides the course checkboxes
-10. **Clear Flowchart** - A button that deletes the current flowchart and reverts the website to its default state
+1. **Select Year** - A dropdown to dictate the academic year version for any chosen template flowchart
+2. **Choose Template** - A dropdown with all [available templates](#current-templates-available) that will load prebuilt flowcharts
+3. **Upload Flowchart** - A button that allows you to upload a saved template flowchart
+4. **Save Template** - A button that downloads the current flowchart with all its changes
+5. **Add Year** - A button that adds a year section below the lowest year section
+6. **Remove Year** - A button that removes the lowest year section, deleting all data inside of it
+7. **Show Transfer** - A button that shows the transfer section
+8. **Hide Transfer** - A button that hides the transfer section, saving all data inside of it
+9. **Show Checkboxes** - A button that shows the course checkboxes
+10. **Hide Checkboxes** - A button that hides the course checkboxes
+11. **Clear Flowchart** - A button that deletes the current flowchart and reverts the website to its default state
 
 ### Course Types
 
@@ -59,43 +60,43 @@ Each flowchart is divided into sections by year. Each year has 3 blocks inside o
 ## Current Templates Available
 
 ### Artificial Intelligence (AI)
-- Artificial Intelligence BS (2025-2026)
+- Artificial Intelligence BS (2026-2027)
 
 ### Computing Exploration (CE)
-- Computing Exploration (2025-2026)
+- Computing Exploration (2025-2026, 2026-2027)
 
 ### Computing and Information Technology (CIT)
-- Computing and Information Technology BS (2025-2026)
+- Computing and Information Technology BS (2025-2026, 2026-2027)
 
 ### Computer Science (CS)
-- Computer Science BS (2025-2026)
-- Computer Science BS/MS (2025-2026)
-- Computer Science/Cybersecurity BS/MS (2025-2026)
-- Computer Science/Software Engineering BS/MS (2025-2026)
+- Computer Science BS (2025-2026, 2026-2027)
+- Computer Science BS/MS (2025-2026, 2026-2027)
+- Computer Science/Cybersecurity BS/MS (2025-2026, 2026-2027)
+- Computer Science/Software Engineering BS/MS (2025-2026, 2026-2027)
 
 ### Cybersecurity (CSEC)
-- Cybersecurity BS (2025-2026)
-- Cybersecurity BS/MS (2025-2026)
-- Cybersecurity/STPP BS/MS (2025-2026)
+- Cybersecurity BS (2025-2026, 2026-2027)
+- Cybersecurity BS/MS (2025-2026, 2026-2027)
+- Cybersecurity/STPP BS/MS (2025-2026, 2026-2027)
 
 ### Game Design and Development (GDD)
-- Game Design and Development BS (2025-2026)
-- Game Design and Development BS/MS (2025-2026)
+- Game Design and Development BS (2025-2026, 2026-2027)
+- Game Design and Development BS/MS (2025-2026, 2026-2027)
 
 ### Human-Centered Computing (HCC)
-- Human-Centered Computing BS (2025-2026)
+- Human-Centered Computing BS (2025-2026, 2026-2027)
 
 ### Humanities, Computing, and Design (HCD)
-- Humanities, Computing, and Design BS (2025-2026)
+- Humanities, Computing, and Design BS (2025-2026, 2026-2027)
 
 ### New Media Interactive Development (NMID)
-- New Media Interactive Development BS (2025-2026)
+- New Media Interactive Development BS (2025-2026, 2026-2027)
 
 ### Software Engineering (SE)
-- Software Engineering BS (2025-2026)
-- Software Engineering BS/MS (2025-2026)
-- Software Engineering/Computer Science BS/MS (2025-2026)
-- Software Engineering/Cybersecurity BS/MS (2025-2026)
+- Software Engineering BS (2025-2026, 2026-2027)
+- Software Engineering BS/MS (2025-2026, 2026-2027)
+- Software Engineering/Computer Science BS/MS (2025-2026, 2026-2027)
+- Software Engineering/Cybersecurity BS/MS (2025-2026, 2026-2027)
 
 ## Abbreviations 
 

@@ -13,49 +13,24 @@
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <h1 id="pageTitle">GCCIS 2025-2026 Flowchart</h1>
+    <h1 id="pageTitle">GCCIS Flowcharts</h1>
+
+    <select id="yearSelect" class="toolbar">
+        <option value="2026-2027">2026-2027</option>
+        <option value="2025-2026">2025-2026</option>
+    </select>
+
     <select id="templateSelect" class="toolbar">
         <option value="">Choose Template</option>
-        <optgroup label="Artificial Intelligence">
-            <option value="ai_bs_2526_template.json">AI BS</option>
-        </optgroup>
-        <optgroup label="Computing Exploration">
-            <option value="ce_2526_template.json">CE</option>
-        </optgroup>
-        <optgroup label="Computing and Information Technology">
-            <option value="cit_bs_2526_template.json">CIT BS</option>
-        </optgroup>
+        <!-- Example
         <optgroup label="Computer Science">
             <option value="cs_bs_2526_template.json">CS BS</option>
             <option value="cs_bsms_2526_template.json">CS BS/MS</option>
             <option value="cscsec_bsms_2526_template.json">CS/CSEC BS/MS</option>
             <option value="csse_bsms_2526_template.json">CS/SE BS/MS</option>
-        </optgroup>
-        <optgroup label="Cybersecurity">
-            <option value="csec_bs_2526_template.json">CSEC BS</option>
-            <option value="csec_bsms_2526_template.json">CSEC BS/MS</option>
-            <option value="csecstpp_bsms_2526_template.json">CSEC/STPP BS/MS</option>
-        </optgroup>
-        <optgroup label="Game Design and Development">
-            <option value="gdd_bs_2526_template.json">GDD BS</option>
-            <option value="gdd_bsms_2526_template.json">GDD BS/MS</option>
-        </optgroup>
-        <optgroup label="Human-Centered Computing">
-            <option value="hcc_bs_2526_template.json">HCC BS</option>
-        </optgroup>
-        <optgroup label="Humanities, Computing, and Design">
-            <option value="hcd_bs_2526_template.json">HCD BS</option>
-        </optgroup>
-        <optgroup label="New Media Interactive Development">
-            <option value="nmid_bs_2526_template.json">NMID BS</option>
-        </optgroup>
-        <optgroup label="Software Engineering">
-            <option value="se_bs_2526_template.json">SE BS</option>
-            <option value="se_bsms_2526_template.json">SE BS/MS</option>
-            <option value="secs_bsms_2526_template.json">SE/CS BS/MS</option>
-            <option value="secsec_bsms_2526_template.json">SE/CSEC BS/MS</option>
-        </optgroup>
+        </optgroup> -->
     </select>
+
     <input id="fileInput" type="file" accept=".json, application/json" style="display: none;">
     <button id="uploadTemplateButton" class="toolbar" type="button">Upload Flowchart <i class="fa-solid fa-arrow-up"></i></button>
     <button id="downloadTemplateButton" class="toolbar" type="button">Save Template <i class="fa-solid fa-arrow-down"></i></button>
