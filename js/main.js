@@ -1,3 +1,7 @@
+/**
+ * This file handles all base logic that can be triggered by the toolbar button.s
+ */
+
 //------------------------------ IMPORTS BELOW ------------------------------//
 import * as match from "/js/match.js";
 import * as load from "/js/load.js";

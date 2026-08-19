@@ -1,3 +1,7 @@
+/**
+ * This file handles creating and loading the actual flowchart.
+ */
+
 //------------------------------ IMPORTS BELOW ------------------------------//
 import * as match from "/js/match.js";
 
@@ -609,7 +613,7 @@ function displayCoursePopup(target) {
         }
     }
 
-    // Check if the current course is currently displayed. Hide it if it is.
+    // Check if the current course is currently displayed. Hide it if it is
     const datasetDiscipline = coursePopup.dataset?.courseDiscipline;
     const datasetNumber = coursePopup.dataset?.courseNumber;
     if (datasetDiscipline === courseDiscipline && datasetNumber === courseNumber) {
@@ -621,7 +625,7 @@ function displayCoursePopup(target) {
 
     // Check if the user already asked for the course
     const courseKey = `${courseDiscipline}-${courseNumber}`;
-    if (Object.hasOwn(courseInformationCache, courseKey))  {
+    if (Object.hasOwn(courseInformationCache, courseKey)) {
         const popupInformation = courseInformationCache[courseKey];
         coursePopup.style.borderColor = popupInformation.borderColor;
         coursePopupTitle.textContent = popupInformation.title;
