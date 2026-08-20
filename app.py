@@ -28,16 +28,22 @@ def connect_to_database():
     """
     try:
         global pool
+
+        if pool is not None:
+            pool.close()
+            pool = None
+
         pool = mariadb.ConnectionPool(
             pool_name="flowchart_pool",
             pool_size=5,
             pool_reset_connection=True,
             pool_validation_interval=500,
+            connect_timeout=5,
             user=os.getenv("DATABASE_USER"),
             password=os.getenv("DATABASE_PASSWORD"),
             host=os.getenv("DATABASE_HOST"),
             port=3306,
-            database=os.getenv("DATABASE_NAME")
+            database=os.getenv("DATABASE_NAME"),
         )
         print(f"[SUCCESS] connect_to_database(): Connected to course database!")
     except Exception as e:
@@ -61,7 +67,7 @@ connect_to_database()   # Connection to the course information database
 
 
 @app.route("/api/course", methods=["GET"])
-def get_course_information() -> jsonify:
+def get_course_information():
     """
     This gets the most recent course information for the selected course.
 
@@ -70,19 +76,19 @@ def get_course_information() -> jsonify:
         number (str): The course number. Ex: 999.
 
     Returns:
-        jsonify: The course's information.
+        The course's information or an error.
     """
     try:
         connection = None
         cursor = None
         if pool is None: connect_to_database()      # Try to establish a connection again
-        if pool is None: raise AttributeError("Database pool has been not established")
+        if pool is None: raise RuntimeError("Database pool has been not established")
 
         connection = pool.get_connection()
-        if connection is None: raise AttributeError("Database connection has been not established")
+        if connection is None: raise RuntimeError("Database connection has been not established")
 
         cursor = connection.cursor(dictionary=True)
-        if cursor is None: raise AttributeError("Database cursor has been not established")
+        if cursor is None: raise RuntimeError("Database cursor has been not established")
 
         discipline = request.args.get('discipline')
         number = request.args.get('number')
@@ -90,19 +96,20 @@ def get_course_information() -> jsonify:
         courseInformation = cursor.fetchone()
         if courseInformation is None: raise ValueError(f"Could not find class information matching {discipline}-{number}")
 
-        return jsonify(courseInformation), 200      # Ok
-    except AttributeError as ae:
-        exception_message = f"[ERROR] get_course_information(): {ae}!"
-        print(exception_message)
-        return jsonify(exception_message), 503      # Service Unavailable
+        return jsonify(courseInformation), 200              # Ok
+    except mariadb.Error:
+        me = "Could not connect to database"
+        print(f"[ERROR] get_course_information(): {me}!")
+        return jsonify({"error": str(me)}), 503             # Service Unavailable
+    except RuntimeError as re:
+        print(f"[ERROR] get_course_information(): {re}!")
+        return jsonify({"error": str(re)}), 503             # Service Unavailable
     except ValueError as ve:
-        exception_message = f"[ERROR] get_course_information(): {ve}!"
-        print(exception_message)
-        return jsonify(exception_message), 404      # Not Found
+        print(f"[ERROR] get_course_information(): {ve}!")
+        return jsonify({"error": str(ve)}), 404             # Not Found
     except Exception as e:
-        exception_message = f"[ERROR] get_course_information(): Could not get course information: {e}!"
-        print(exception_message)
-        return jsonify(exception_message), 500      # Internal Server Error
+        print(f"[ERROR] get_course_information(): Could not get course information: {e}!")
+        return jsonify({"error": str(e)}), 500              # Internal Server Error
     finally:
         if cursor: cursor.close()
         if connection: connection.close()

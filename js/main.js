@@ -149,7 +149,7 @@ function processFlowchart(template, resetChoose, resetUpload) {
     if (!template || typeof template != "object" || Array.isArray(template)
         || typeof template.title !== "string" ||  !Array.isArray(template.transfer) 
         || !Array.isArray(template.college) || !Array.isArray(template.notes)) {
-        alert("The given JSON file does not meet the required formatting.");
+        alert("The given JSON file does not meet the required formatting!");
         pageTitle.textContent = defaultTitle;
         return;
     }
@@ -467,7 +467,7 @@ function popYear() {
         yearDividerDiv.remove();
         academicYearCount--;
     } else {
-        alert("The lowest year is not empty. Remove all courses before deleting it.");
+        alert("The lowest year is not empty. Remove all courses before deleting it!");
     }
 }
 

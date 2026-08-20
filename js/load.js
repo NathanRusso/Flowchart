@@ -450,7 +450,7 @@ function createCourseInput(savedCourse) {
     input.addEventListener("blur", (event) => {
         const currentValue = event.target.value;
         if (currentValue && !courseRegex.test(currentValue)) {
-            alert("Format must be in ABCD-123, ABCD-123H, or blank.");
+            alert("Format must be in ABCD-123, ABCD-123H, or blank!");
             setTimeout(() => input.focus(), 0); // Prevents alert loop
         }
     });
@@ -577,7 +577,7 @@ function displayCoursePopup(target) {
         case "class-input": {
             const currentInputValue = courseChildren[1].value;
             if (!currentInputValue || !courseRegex.test(currentInputValue)) {
-                alert("Cannot find course information. Format must be in ABCD-123, ABCD-123H, or blank.");
+                alert("Cannot find course information. Format must be in ABCD-123, ABCD-123H, or blank!");
                 return;
             }
             const courseValues = currentInputValue.trim().split("-");
@@ -596,7 +596,7 @@ function displayCoursePopup(target) {
             } else {
                 const currentInputValue = courseChildren[2].value;
                 if (!currentInputValue || !courseRegex.test(currentInputValue)) {
-                    alert("Cannot find course information. Format must be in ABCD-123, ABCD-123H, or blank.");
+                    alert("Cannot find course information. Format must be in ABCD-123, ABCD-123H, or blank!");
                     return;
                 }
                 const courseValues = currentInputValue.trim().split("-");
@@ -636,8 +636,8 @@ function displayCoursePopup(target) {
 
     // Gets the course information from the database and updates the popup.
     getCourseDatabaseInformation(courseDiscipline, courseNumber).then(courseDBInfo => {
-        if (!courseDBInfo || courseDBInfo === {}) {
-            alert(`Cannot find information on course ${courseDiscipline}-${courseNumber}.`);
+        if (!courseDBInfo) {
+            alert(`Cannot find information on course ${courseDiscipline}-${courseNumber}!`);
             return;
         }
         coursePopup.style.borderColor = courseColor;
@@ -665,11 +665,11 @@ async function getCourseDatabaseInformation(discipline, number) {
     url.search = new URLSearchParams({ discipline: discipline, number: number });
     try {
         const response = await fetch(url);
-        if (!response.ok) throw new Error(`Response is not ok! Response error is ${response.error}!`);
         const result = await response.json();
+        if (!response.ok) throw new Error(result.error);
         return result;
     } catch (error) {
-        console.error(`[ERROR] getCourseDatabaseInformation(): ${error.message}`);
+        console.error(`[ERROR] getCourseDatabaseInformation(): ${error.message}!`);
         return null;
     }
 }
