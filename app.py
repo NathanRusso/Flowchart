@@ -28,11 +28,6 @@ def connect_to_database():
     """
     try:
         global pool
-
-        if pool is not None:
-            pool.close()
-            pool = None
-
         pool = mariadb.ConnectionPool(
             pool_name="flowchart_pool",
             pool_size=5,
@@ -79,24 +74,20 @@ def get_course_information():
         The course's information or an error.
     """
     try:
-        connection = None
-        cursor = None
-        if pool is None: connect_to_database()      # Try to establish a connection again
         if pool is None: raise RuntimeError("Database pool has been not established")
 
-        connection = pool.get_connection()
-        if connection is None: raise RuntimeError("Database connection has been not established")
+        with pool.get_connection() as connection:
+            if connection is None: raise RuntimeError("Database connection has been not established")
+            with connection.cursor(dictionary=True) as cursor:
+                if cursor is None: raise RuntimeError("Database cursor has been not established")
 
-        cursor = connection.cursor(dictionary=True)
-        if cursor is None: raise RuntimeError("Database cursor has been not established")
+                discipline = request.args.get('discipline')
+                number = request.args.get('number')
+                cursor.execute(COURSE_QUERY, (discipline, number))
+                courseInformation = cursor.fetchone()
+                if courseInformation is None: raise ValueError(f"Could not find class information matching {discipline}-{number}")
 
-        discipline = request.args.get('discipline')
-        number = request.args.get('number')
-        cursor.execute(COURSE_QUERY, (discipline, number))
-        courseInformation = cursor.fetchone()
-        if courseInformation is None: raise ValueError(f"Could not find class information matching {discipline}-{number}")
-
-        return jsonify(courseInformation), 200              # Ok
+                return jsonify(courseInformation), 200      # Ok
     except mariadb.Error:
         me = "Could not connect to database"
         print(f"[ERROR] get_course_information(): {me}!")
