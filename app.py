@@ -101,9 +101,6 @@ def get_course_information():
     except Exception as e:
         print(f"[ERROR] get_course_information(): Could not get course information: {e}!")
         return jsonify({"error": str(e)}), 500              # Internal Server Error
-    finally:
-        if cursor: cursor.close()
-        if connection: connection.close()
 
 
 if __name__ == "__main__":
