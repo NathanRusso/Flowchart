@@ -79,6 +79,11 @@ docker rm flowchart-test
 ```bash
 cp json/templates/*.json json/templates/2025-2026/
 ```
+
 ```bash
 rm json/templates/*.json
+```
+
+```
+for f in *2526*; do mv -- "$f" "${f//2526/2025_2026}"; done
 ```
