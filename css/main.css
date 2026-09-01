@@ -96,11 +96,12 @@
     width: 15px;
     height: 15px;
     margin: 0px;
-    padding: 0;
-    border: 0;
+    padding: 0px;
+    border: 0px;
     border-radius: 3px;
     background-color: var(--background-color);
     color: var(--text-color);
+    font-size: 1.2rem;
     cursor: pointer;
     position: absolute;
     z-index: 4;
