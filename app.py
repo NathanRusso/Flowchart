@@ -14,6 +14,11 @@ COURSE_QUERY = (
     "FROM courses c JOIN departments d ON c.department = d.id "
     "WHERE d.code = ? AND c.course = ? ORDER BY c.quarter DESC LIMIT 1"
 )
+#COURSE_QUERY = (
+#    "SELECT c.quarter, d.code, c.course, c.credits, c.title, c.description, c.prerequisites, c.contact, c.offered "
+#    "FROM courses c JOIN departments d ON c.department = d.id "
+#    "WHERE d.code = ? AND c.course = ? ORDER BY c.quarter DESC LIMIT 1"
+#)
 pool = None
 
 # Startup code

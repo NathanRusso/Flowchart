@@ -26,8 +26,9 @@ const coursePopup = document.getElementById("coursePopup");
 const coursePopupButton = document.getElementById("coursePopupButton");
 const coursePopupTitle = document.getElementById("coursePopupTitle");
 const coursePopupDescription = document.getElementById("coursePopupDescription");
-// const coursePopupPrerequisites = document.getElementById("coursePopupPrerequisites"); // Database didn't contain this information
-// const coursePopupOffered = document.getElementById("coursePopupOffered"); // Database didn't contain this information
+const coursePopupPrerequisites = document.getElementById("coursePopupPrerequisitesContent");
+const coursePopupContact = document.getElementById("coursePopupContactContent");
+const coursePopupOffered = document.getElementById("coursePopupOfferedContent");
 
 let hyperDictionary = {}        // A mapping of hyperParentIds to hyperChildIds to their courseDivs
 let initialHyperChildIds = {}   // A mapping of hyperParentIds to the initial hyperChildIds
@@ -630,6 +631,9 @@ function displayCoursePopup(target) {
         coursePopup.style.borderColor = popupInformation.borderColor;
         coursePopupTitle.textContent = popupInformation.title;
         coursePopupDescription.textContent = popupInformation.description;
+        coursePopupPrerequisites.textContent = popupInformation.prerequisites;
+        coursePopupContact.textContent = popupInformation.contact;
+        coursePopupOffered.textContent = popupInformation.offered;
         revealCoursePopup();
         return;
     }
@@ -647,7 +651,10 @@ function displayCoursePopup(target) {
         courseInformationCache[courseKey] = {
             borderColor: courseColor,
             title: coursePopupTitle.textContent,
-            description: coursePopupDescription.textContent
+            description: coursePopupDescription.textContent,
+            prerequisites: courseDBInfo.prerequisites ?? "",
+            contact: courseDBInfo.contact ?? "",
+            offered: courseDBInfo.offered ?? ""
         }
         revealCoursePopup();
     });
