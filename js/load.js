@@ -27,8 +27,8 @@ const coursePopupButton = document.getElementById("coursePopupButton");
 const coursePopupTitle = document.getElementById("coursePopupTitle");
 const coursePopupDescription = document.getElementById("coursePopupDescription");
 const coursePopupPrerequisites = document.getElementById("coursePopupPrerequisitesContent");
-const coursePopupContact = document.getElementById("coursePopupContactContent");
 const coursePopupOffered = document.getElementById("coursePopupOfferedContent");
+const coursePopupContact = document.getElementById("coursePopupContactContent");
 
 let hyperDictionary = {}        // A mapping of hyperParentIds to hyperChildIds to their courseDivs
 let initialHyperChildIds = {}   // A mapping of hyperParentIds to the initial hyperChildIds
@@ -632,8 +632,8 @@ function displayCoursePopup(target) {
         coursePopupTitle.textContent = popupInformation.title;
         coursePopupDescription.textContent = popupInformation.description;
         coursePopupPrerequisites.textContent = popupInformation.prerequisites;
-        coursePopupContact.textContent = popupInformation.contact;
         coursePopupOffered.textContent = popupInformation.offered;
+        coursePopupContact.textContent = popupInformation.contact;
         revealCoursePopup();
         return;
     }
@@ -653,8 +653,8 @@ function displayCoursePopup(target) {
             title: coursePopupTitle.textContent,
             description: coursePopupDescription.textContent,
             prerequisites: courseDBInfo.prerequisites ?? "",
-            contact: courseDBInfo.contact ?? "",
-            offered: courseDBInfo.offered ?? ""
+            offered: courseDBInfo.offered ?? "",
+            contact: courseDBInfo.contact ?? ""
         }
         revealCoursePopup();
     });
