@@ -14,7 +14,6 @@ let academicYearCount = 0;      // The numbers of years of school currently bein
 let transferSection = false;    // Whether or not the transfer section is visible.
 let uploadedFilename = null;    // The filename of the uploaded file.
 
-const body = document.body;
 const pageTitle = document.getElementById("pageTitle");
 const yearSelect = document.getElementById("yearSelect");
 const templateSelect = document.getElementById("templateSelect");
@@ -68,7 +67,6 @@ updateTemplateFlowcharts(yearSelect.value);
  * @param {string} year - the selected year to view templates form
  */
 async function updateTemplateFlowcharts(year) {
-    const pastOption = templateSelect.value;    // Gets the selected flowchart
     templateSelect.innerHTML = "";              // Clears the dropdown options
 
     // Adds back the empty option
